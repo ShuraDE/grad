@@ -3,4 +3,7 @@
 .
 =======
 workers Fry & Shura
+
+Ordnernamen in AddonsOrdner festlegen !
+
 >>>>>>> origin/master
