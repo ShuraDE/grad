@@ -11,17 +11,19 @@ if (isServer) then {
   //client output to local log
   (format ["DEBUG LOCAL : %1", _output]) call BIS_fnc_log;
 
-  if (isNull player) then {
-    if (!hasInterface) then {
-      _caller = "HC";
+  //only if allowFunctionLog is activ
+  if (getNumber(missionconfigfile >> "allowFunctionsLog") == 1) then {
+    if (isNull player) then {
+      if (!hasInterface) then {
+        _caller = "HC";
+      } else {
+        _caller = "#N/A";
+      };
     } else {
-      _caller = "#N/A";
+      _caller = profileName;
     };
-  } else {
-    _caller = profileName;
+
+    //add to server log
+    [[_caller, _output],"GA_fnc_DEBUG_SRV",false,false] call BIS_fnc_MP;
   };
-
-  //add to server log
-  [[_caller, _output],"GA_fnc_DEBUG_SRV",false,false] call BIS_fnc_MP;
-
 };
