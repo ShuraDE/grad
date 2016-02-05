@@ -5,6 +5,6 @@
 workers Fry & Shura
 
 Ordnernamen in AddonsOrdner festlegen !
-New
+New section added
 
 >>>>>>> origin/master
