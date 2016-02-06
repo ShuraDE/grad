@@ -13,7 +13,7 @@ Repository "https://github.com/gruppe-adler" verschoben.
 
 Setup:
 * Mount P:
-* create x folder in P: und im ArmA InstDir
+* create "y" folder in P: und im ArmA InstDir
 * console als admin starten
-** mklink /D /J "C:\Games\Steam\steamapps\common\Arma 3\x\grad" "C:\Users\Shura\Documents\Arma 3\missions\GRAD_Lib"
-** mklink /D /J "P:\x\grad" "C:\Users\Shura\Documents\Arma 3\missions\GRAD_Lib"
+** mklink /D /J "C:\Games\Steam\steamapps\common\Arma 3\y\grad" "C:\Users\Shura\Documents\Arma 3\missions\GRAD_Lib"
+** mklink /D /J "P:\y\grad" "C:\Users\Shura\Documents\Arma 3\missions\GRAD_Lib"
