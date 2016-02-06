@@ -1,5 +1,4 @@
 #define COMPONENT main
-//#include "script_mod.hpp"
 #include "\y\grad\addons\main\script_mod.hpp"
 
 #define DEBUG_MODE_FULL
@@ -15,6 +14,6 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MAIN
 #endif
 
+//add component relevant defines here
 
-//#include "script_macros.hpp"
 #include "\y\grad\addons\main\script_macros.hpp"
