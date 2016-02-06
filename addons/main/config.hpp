@@ -11,6 +11,18 @@ class CfgPatches {
         authorUrl = "https://gruppe-adler.de";
     };
 };
-
+class CfgMods
+{
+    class PREFIX
+    {
+        dir = "@GRAD_Lib";
+        name = "Gruppe Adler Libary";
+        hidePicture = "true";
+        hideName = "true";
+        actionName = "Website";
+        action = "http://www.gruppe-adler.de";
+        description = "Gruppe Adler";
+    };
+};
 
 #include "cfgFunctions.hpp"
