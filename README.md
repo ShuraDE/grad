@@ -2,5 +2,5 @@
 <<<<<<< HEAD
 .
 =======
-müde bin verdammt noc mal verdammt
+müde bin 
 >>>>>>> origin/master
