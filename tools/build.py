@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+####  build.py completly from acemod ace3
+
 import os
 import sys
 import subprocess
@@ -32,7 +34,7 @@ def check_for_obsolete_pbos(addonspath, file):
 def main():
     print("""
   ####################
-  # ACE3 Debug Build #
+  # GRAD Debug Build #
   ####################
 """)
 
@@ -46,15 +48,15 @@ def main():
     failed = 0
     skipped = 0
     removed = 0
-    
+
     for file in os.listdir(addonspath):
         if os.path.isfile(file):
             if check_for_obsolete_pbos(addonspath, file):
                 removed += 1
                 print("  Removing obsolete file => " + file)
                 os.remove(file)
-    print("")        
-    
+    print("")
+
     for p in os.listdir(addonspath):
         path = os.path.join(addonspath, p)
         if not os.path.isdir(path):

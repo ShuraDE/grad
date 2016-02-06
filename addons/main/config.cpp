@@ -26,5 +26,3 @@ class CfgMods {
         action = "http://www.gruppe-adler.de/";
     };
 };
-
-#include "cfgFunctions.hpp"
