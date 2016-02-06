@@ -1,3 +1,4 @@
+/*
 class CfgFunctions
 {
 	class GRAD
@@ -21,3 +22,4 @@ class CfgFunctions
 		};
 	};
 };
+*/
