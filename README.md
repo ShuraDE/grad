@@ -2,5 +2,5 @@
 <<<<<<< HEAD
 .
 =======
-müde bin 
+müde bin ... wat ne geburt
 >>>>>>> origin/master
