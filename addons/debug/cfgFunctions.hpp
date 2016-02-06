@@ -5,7 +5,7 @@ class CfgFunctions
 		class DEBUG
 		{
 			class DEBUG_SRV {
-				file = "\debug\debug_server.sqf";
+				file = "debug_server.sqf";
 				preInit  = 1;
 				recompile = 1;
 				headerType = -1;
