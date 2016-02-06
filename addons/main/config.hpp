@@ -12,4 +12,5 @@ class CfgPatches {
     };
 };
 
+
 #include "cfgFunctions.hpp"
