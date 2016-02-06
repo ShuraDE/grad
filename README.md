@@ -7,5 +7,5 @@ Ordnernamen in AddonsOrdner festlegen !
 
 
 Die Lib ist nur zu Test und Übungszwecken.
-Bei Erreichung eines Meilensteins für eine produktive Version erreicht wird das
+Bei Erreichung eines Meilensteins für eine produktive Version, wird das
 Repository "https://github.com/gruppe-adler" verschoben.
