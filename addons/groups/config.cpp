@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"A3_BaseConfig_F"};
+        requiredAddons[] = {"grad_main"};
         version = VERSION;
         author[] = {"Fry","Shura"};
         authorUrl = "https://gruppe-adler.de";
