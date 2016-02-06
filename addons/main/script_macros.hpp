@@ -15,11 +15,9 @@
     #define PREP(fncName) DFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
 
-// TODO check
-//need ??
-#define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QUOTE(PATHTOF(folder\__PREP__.sqf))
 
-#define ACE_isHC (!hasInterface && !isDedicated)
+
+#define GRAD_isHC (!hasInterface && !isDedicated)
 
 //By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
 #ifdef CBA_DEBUG_SYNCHRONOUS
