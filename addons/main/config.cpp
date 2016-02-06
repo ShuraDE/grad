@@ -559,6 +559,5 @@ class CfgMods {
         hideName = "true";
         actionName = "Website";
         action = "http://www.gruppe-adler.de/";
-        description = "Issue Tracker: https://github.com/ShuraDE/GRAD_Lib/issues";
     };
 };
