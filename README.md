@@ -3,7 +3,6 @@
 workers Fry & Shura
 
 Ordnernamen in AddonsOrdner festlegen !
->>>>>>> origin/master
 
 
 Die Lib ist nur zu Test und Übungszwecken.
