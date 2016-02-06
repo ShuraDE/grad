@@ -17,3 +17,5 @@ Setup:
 * console als admin starten
 ** mklink /D /J "C:\Games\Steam\steamapps\common\Arma 3\y\grad" "C:\Users\Shura\Documents\Arma 3\missions\GRAD_Lib"
 ** mklink /D /J "P:\y\grad" "C:\Users\Shura\Documents\Arma 3\missions\GRAD_Lib"
+
+Falls künftig dependencies (z.B. cba) hinzukommen sollten, entsprechend verfahren und code auf p:\x\cba kopieren
