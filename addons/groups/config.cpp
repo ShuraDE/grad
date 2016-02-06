@@ -11,5 +11,3 @@ class CfgPatches {
         authorUrl = "https://gruppe-adler.de";
     };
 };
-
-//#include "cfgFunctions.hpp"
