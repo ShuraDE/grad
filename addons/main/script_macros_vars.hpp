@@ -6,9 +6,3 @@
 #define PUSH(var1,var2) (var1) pushBack (var2)
 
 #define ISNILS(VARIABLE,DEFAULT_VALUE) if (isNil #VARIABLE) then { ##VARIABLE = ##DEFAULT_VALUE }
-
-#define false 0
-#define true 1
-
-#define private 0
-#define public 2
