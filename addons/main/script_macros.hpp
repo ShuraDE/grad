@@ -15,6 +15,8 @@
     #define PREP(fncName) DFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
 
+// TODO check
+//need ??
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QUOTE(PATHTOF(folder\__PREP__.sqf))
 
 #define ACE_isHC (!hasInterface && !isDedicated)
