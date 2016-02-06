@@ -1,12 +1,12 @@
 class CfgFunctions
 {
-	class GRAD
+	class grad
 	{
-		class main
+		class debug
 		{
 			class test {
-				description = "Testfunction (hint test)";
-				file = "\y\grad\addons\main\test.sqf";
+				description = "Testfunktion via Config in main";
+				file = "test.sqf";
 			};
 		};
 	};
