@@ -5,14 +5,15 @@
 #define DEFAULT_VERSIONING_LEVEL 2
 
 
-#define DFUNC(var1) (TRIPLES(ADDON,fnc,var1))
+#define SFUNC(var1) TRIPLES(ADDON,fnc,var1)
+#define IFUNC(var1) TRIPLES(BIS,fnc,var1)
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
 #ifdef DISABLE_COMPILE_CACHE
-    #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+    #define PREP(fncName) SFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
-    #define PREP(fncName) DFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
+    #define PREP(fncName) SFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
 
 
