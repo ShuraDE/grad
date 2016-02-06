@@ -1,4 +1,5 @@
 // COMPONENT should be defined in the script_component.hpp and included BEFORE this hpp
+#define MAINPREFIX y
 #define PREFIX grad
 
 #define MAJOR 0
