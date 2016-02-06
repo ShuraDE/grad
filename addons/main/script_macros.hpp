@@ -7,6 +7,7 @@
 
 #define SFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define IFUNC(var1) TRIPLES(BIS,fnc,var1)
+#define STRVAR(var1) #DOUBLES(PREFIX,var1)
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
