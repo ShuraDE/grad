@@ -4,6 +4,9 @@
 // Default versioning level
 #define DEFAULT_VERSIONING_LEVEL 2
 
+
+#define DFUNC(var1) (TRIPLES(ADDON,fnc,var1))
+
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
 #ifdef DISABLE_COMPILE_CACHE
