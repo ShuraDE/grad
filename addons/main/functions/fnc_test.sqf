@@ -1,2 +1,1 @@
-hint "grad test";
 "test";
