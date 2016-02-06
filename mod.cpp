@@ -8,4 +8,4 @@ tooltip = "Gruppe Adler Libary";
 tooltipOwned = "Gruppe Adler Libary Owned";
 author = "Gruppe Adler; Fry, Shura";
 overviewPicture = "ga_logo.paa";
-overviewText = "Gruppe Adler Libary";
+overviewText = "Gruppe Adler Libary"; 
