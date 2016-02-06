@@ -1,0 +1,55 @@
+{
+  "exclude": [
+    "^(node_modules|bower_components|\\.imdone|target|build|dist|logs)[\\/\\\\]?|\\.(git|svn|hg|npmignore)|\\~$|\\.(jpg|png|gif|swp|ttf|otf)$"
+  ],
+  "watcher": true,
+  "keepEmptyPriority": false,
+  "code": {
+    "include_lists": [
+      "TODO",
+      "DOING",
+      "DONE",
+      "PLANNING",
+      "FIXME",
+      "ARCHIVE",
+      "HACK",
+      "CHANGED",
+      "XXX",
+      "IDEA",
+      "NOTE",
+      "REVIEW"
+    ]
+  },
+  "lists": [
+    {
+      "name": "Done",
+      "hidden": false
+    },
+    {
+      "name": "Ideen",
+      "hidden": false
+    },
+    {
+      "name": "Backlog",
+      "hidden": false
+    }
+  ],
+  "marked": {
+    "gfm": true,
+    "tables": true,
+    "breaks": false,
+    "pedantic": false,
+    "smartLists": true,
+    "langPrefix": "language-"
+  },
+  "meta": {
+    "issue": {
+      "urlTemplate": "https://github.com/ShuraDE/GRAD_Lib/issues/%s",
+      "titleTemplate": "github issue #%s"
+    },
+    "user": {
+      "urlTemplate": "https://github.com/%s",
+      "titleTemplate": "github profile for %s"
+    }
+  }
+}

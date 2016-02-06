@@ -1,6 +1,7 @@
 # GRAD_Lib
-<<<<<<< HEAD
-.
 =======
-müde bin ... wat ne geburt
+workers Fry & Shura
+
+Ordnernamen in AddonsOrdner festlegen !
+New
 >>>>>>> origin/master
