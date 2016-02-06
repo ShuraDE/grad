@@ -32,3 +32,22 @@
 #else
 #define THIS_FILE_ __FILE__
 #endif
+
+// Internal Functions
+#define DOUBLES(var1,var2) ##var1##_##var2
+#define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
+#define QUOTE(var1) #var1
+
+#ifdef MODULAR
+    #define COMPONENT_T DOUBLES(t,COMPONENT)
+    #define COMPONENT_M DOUBLES(m,COMPONENT)
+    #define COMPONENT_S DOUBLES(s,COMPONENT)
+    #define COMPONENT_C DOUBLES(c,COMPONENT)
+    #define COMPONENT_F COMPONENT_C
+#else
+    #define COMPONENT_T COMPONENT
+    #define COMPONENT_M COMPONENT
+    #define COMPONENT_S COMPONENT
+    #define COMPONENT_F COMPONENT
+    #define COMPONENT_C COMPONENT
+#endif
