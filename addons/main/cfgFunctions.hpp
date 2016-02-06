@@ -6,7 +6,7 @@ class CfgFunctions
 		{
 			class test {
 				description = "Testfunktion via Config in main";
-				file = "test.sqf";
+				file = "\y\grad\addons\main\functions\fnc_test.sqf";
 			};
 		};
 	};
