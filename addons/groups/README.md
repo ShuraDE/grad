@@ -1,8 +1,8 @@
 Group Management
 
-Aktuell wird in GA BFT in Verbindung mit Dynamic Groups verwendet.
+Aktuell wird BFT und ab und an in Kombination mit Dynamic Groups verwendet.
 
-Schächen der einzelnen Systeme
+Schwächen der einzelnen Systeme
 BFT:
 * fixe Markergrößen/-typen
 * Sync delay
