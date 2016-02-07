@@ -6,8 +6,8 @@ if (isServer) then {
 
   "create grp init" call BIS_fnc_log;
 
-  //_side_logic = createCenter sidelogic;
-  _group_logic = createGroup sidelogic;
+  _side_logic = createCenter sidelogic;
+  _group_logic = createGroup _side_logic;
 
 
   _newORBATModul = _group_logic createUnit ["ModuleStrategicMapORBAT_F",[0,0,0],[],0,"NONE"];
@@ -18,7 +18,7 @@ if (isServer) then {
 
   sleep 0.5;
 
-  [_newORBATModul, [_unit]] call BIS_fnc_moduleStrategicMapORBAT;
+  [_newORBATModul, [_unit]back] call BIS_fnc_moduleStrategicMapORBAT;
 
   "create done" call BIS_fnc_log;
   //(format ["DEBUG SERVER : path %1" , str(_newORBATModul getVariable "Path")) call BIS_fnc_log;
