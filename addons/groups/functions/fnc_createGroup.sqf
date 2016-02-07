@@ -6,6 +6,7 @@ if (isServer) then {
 
   "create grp init" call BIS_fnc_log;
 
+/*
   _side_logic = createCenter sidelogic;
   _group_logic = createGroup _side_logic;
 
@@ -19,11 +20,12 @@ if (isServer) then {
   sleep 0.5;
 
   [_newORBATModul, [_unit]back] call BIS_fnc_moduleStrategicMapORBAT;
-
+*/
   "create done" call BIS_fnc_log;
   //(format ["DEBUG SERVER : path %1" , str(_newORBATModul getVariable "Path")) call BIS_fnc_log;
   //(format ["DEBUG SERVER : parent %1" , str(_newORBATModul getVariable "Parent")) call BIS_fnc_log;
 
+  TRACE_2("test %s", (name _unit));
 
 } else {
   //TODO ServerCall von main
