@@ -21,7 +21,7 @@ Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.
 grob planung "groups"
 ohne teste, erster entwurf
 
-_cient callable functions
+_client callable functions
 createGroup (name)
 selectInsignia (group, insignia)
 inviteToGroup (player, group)
