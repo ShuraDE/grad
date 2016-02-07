@@ -1,6 +1,6 @@
 class CfgFunctions
 {
-	class PREFIX
+	class ADDON
 	{
 		class orbat
 		{
@@ -17,13 +17,6 @@ class CfgFunctions
 				file = "\y\grad\addons\groups\functions\fnc_setGroupData.sqf";
 			};
 
-		};
-		class admin
-		{
-			class group_recompile {
-				description = "Get ORBAT config from group";
-				file = "\y\grad\addons\groups\functions\fnc_admin_recompile.sqf";
-			};
 		};
 	};
 };
