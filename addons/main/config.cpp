@@ -28,4 +28,4 @@ class CfgMods {
 };
 
 
-#define SFUNC(intprocess) = call compileFinal preprocessFileLineNumbers "\y\grad\addons\main\fnc_intmain.sqf"
+#define SFUNC(main,initprocess) = call compileFinal preprocessFileLineNumbers "\y\grad\addons\main\fnc_intmain.sqf"

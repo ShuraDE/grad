@@ -5,7 +5,7 @@
 #define DEFAULT_VERSIONING_LEVEL 2
 
 
-#define SFUNC(var1) TRIPLES(ADDON,fnc,var1)  //MOD FUNKTION
+#define SFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)  //MOD FUNKTION
 #define IFUNC(var1) TRIPLES(BIS,fnc,var1)   // BIS Funktion
 #define STRVAR(var1,var2) #DOUBLES(DOUBLES(PREFIX,var1),var2)
 
