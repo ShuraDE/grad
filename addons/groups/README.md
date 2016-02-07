@@ -8,6 +8,7 @@ BFT:
 * Sync delay
 Dynamic Groups
 * ist aktuell nur zufällige insignia
+* unterstützt afaik nicht ORBAT
 ORBAT
 * benötigt config, einzeln eingeschränkt dynamisch
 
@@ -19,7 +20,7 @@ Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.
 
 
 grob planung "groups"
-ohne teste, erster entwurf
+ohne tests, erster entwurf
 
 _client callable functions
 createGroup (name)
@@ -28,9 +29,10 @@ inviteToGroup (player, group)
 becomeLeader (player)
 leaveGroup (player)
 joinGroup (player, group)
-modifyGroup (size[=icon], color, name,
+modifyGroup (size[=icon], type[=icon], color, name,
 
 _server functions
 newMemberInGroup (size überprüfung, insignia broadcast)
 newLeader
+newJIPConnected (share setup if necessary )
 ....
