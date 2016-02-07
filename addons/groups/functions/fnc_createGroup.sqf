@@ -1,10 +1,7 @@
-private ["_unit","_newORBATModul","_side_logic","_group_logic"];
-
-_unit = _this select 0;
+//private ["_newORBATModul","_side_logic","_group_logic"];
+params ["_unit"];
 
 if (isServer) then {
-
-  "create grp init" call BIS_fnc_log;
 
 /*
   _side_logic = createCenter sidelogic;
@@ -21,11 +18,10 @@ if (isServer) then {
 
   [_newORBATModul, [_unit]back] call BIS_fnc_moduleStrategicMapORBAT;
 */
-  "create done" call BIS_fnc_log;
+  LOG_INFO("test");
   //(format ["DEBUG SERVER : path %1" , str(_newORBATModul getVariable "Path")) call BIS_fnc_log;
   //(format ["DEBUG SERVER : parent %1" , str(_newORBATModul getVariable "Parent")) call BIS_fnc_log;
 
-  TRACE_2("test %s", (name _unit));
 
 } else {
   //TODO ServerCall von main
