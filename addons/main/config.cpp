@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] =
         {
-           "extended_eventhandlers", "cba_ui", "cba_xeh", "cba_xeh_a3", "cba_jr"
+           "extended_eventhandlers", "cba_ui", "cba_xeh", "cba_xeh_a3", "cba_jr", "cba_diagnostic"
         };
         author[] = {"Fry","Shura"};
         authorUrl = "https://gruppe-adler.de";
