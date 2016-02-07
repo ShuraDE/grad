@@ -25,7 +25,7 @@ class CfgORBAT
 			commander="NATOMen";
 			commanderRank="Colonel";
 			text="Mission Command - Callsign: Command";
-			textShort = "Alpha";
+			textShort = "Command";
 			color[] = {0,0,1,1};
 			subordinates[] = {}; //{UBULLFROG,UFOXHOUND,UACORN};
 			class B_S1
@@ -88,7 +88,7 @@ class CfgORBAT
 				size = "Squad";
 				type = "Infantry";
 				insignia = "\y\grad\ga_logo.paa";
-				colorInsignia[] = {0,0,1,1};
+				//colorInsignia[] = {0,0,1,1};
 				commander = "NATOMen";
 				commanderRank = "Captain";
 				tags[] = {};
@@ -106,6 +106,7 @@ class CfgORBAT
 					type = "Infantry";
 					size = "FireTeam";
 					side = "West";
+					textShort = "B1";
 					commander = "NATOMen";
 					insignia = "\y\grad\ga_logo.paa";
 					tags[] = {"BLUFOR", "USMC"};
@@ -117,6 +118,7 @@ class CfgORBAT
 					type = "Infantry";
 					size = "FireTeam";
 					side = "West";
+					textShort = "B2";
 					commander = "NATOMen";
 					insignia = "\y\grad\ga_logo.paa";
 					tags[] = {"BLUFOR", "USMC"};

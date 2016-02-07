@@ -1,0 +1,2 @@
+get group data
+[configFile >> "cfgORBAT" >> "B_HQ"] call BIS_fnc_ORBATGetGroupParams
