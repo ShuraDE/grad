@@ -13,3 +13,4 @@ class CfgPatches {
 };
 
 #include "cfgORBAT.hpp"
+#include "cfgFunctions.hpp"
