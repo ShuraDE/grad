@@ -25,3 +25,7 @@
 #ifdef CBA_DEBUG_SYNCHRONOUS
     #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
 #endif
+
+#define LOG_WARN(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_log
+#define LOG_INFO(MESSAGE) [THIS_FILE_, __LINE__, ('INFO: ' + MESSAGE)] call CBA_fnc_log
+#define LOG_ERR(MESSAGE)  [THIS_FILE_, __LINE__, "ERROR", MESSAGE] call CBA_fnc_error;
