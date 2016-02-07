@@ -11,3 +11,5 @@ class CfgPatches {
         authorUrl = "https://gruppe-adler.de";
     };
 };
+
+#include "cfgORBAT.hpp"

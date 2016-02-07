@@ -13,7 +13,7 @@ class CfgORBAT
 		text="High Command";
 		textShort = "Base";
 		color[] = {0,0,1,1};
-		subordinates[] = {}; //{USOCOM_LOC};
+		subordinates[] = {};
 		class B_COMM
 		{
 			id = 1;
@@ -94,7 +94,7 @@ class CfgORBAT
 				tags[] = {};
 				text = "Bravo Squad";
 				textShort = "Bravo";
-				//texture = "\ca\missions_f\data\orbat\customTexture_ca.paa"; // Custom texture, will replace icon set by 'type' param.
+				texture = "\y\grad\ga_logo.paa"; // Custom texture, will replace icon set by 'type' param.
 				color[] = {0,0,1,1};
 				description= "Bravo Squad";
 				assets[] = {B_Boat_Transport_01_F};
