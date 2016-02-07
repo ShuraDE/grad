@@ -26,3 +26,6 @@ class CfgMods {
         action = "http://www.gruppe-adler.de/";
     };
 };
+
+
+#define SFUNC(intprocess) = call compileFinal preprocessFileLineNumbers "\y\grad\addons\main\fnc_intmain.sqf"
