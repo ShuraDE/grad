@@ -13,3 +13,24 @@ ORBAT
 
 Ziel:
 Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.
+
+
+
+
+
+grob planung "groups"
+ohne teste, erster entwurf
+
+_cient callable functions
+createGroup (name)
+selectInsignia (group, insignia)
+inviteToGroup (player, group)
+becomeLeader (player)
+leaveGroup (player)
+joinGroup (player, group)
+modifyGroup (size[=icon], color, name,
+
+_server functions
+newMemberInGroup (size überprüfung, insignia broadcast)
+newLeader
+....
