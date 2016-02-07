@@ -6,7 +6,6 @@ class CfgFunctions
 		{
 			class createNewGroup {
 				description = "Create a new Group in ORBAT";
-				postInit = 1;
 				file = "\y\grad\addons\groups\functions\fnc_createGroup.sqf";
 			};
 			class getGroupData {

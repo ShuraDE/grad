@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 //private ["_newORBATModul","_side_logic","_group_logic"];
 params ["_unit"];
 
 if (isServer) then {
 
-/*
+
   _side_logic = createCenter sidelogic;
   _group_logic = createGroup _side_logic;
 
@@ -16,12 +17,9 @@ if (isServer) then {
 
   sleep 0.5;
 
-  [_newORBATModul, [_unit]back] call BIS_fnc_moduleStrategicMapORBAT;
-*/
-  LOG_INFO("test");
-  //(format ["DEBUG SERVER : path %1" , str(_newORBATModul getVariable "Path")) call BIS_fnc_log;
-  //(format ["DEBUG SERVER : parent %1" , str(_newORBATModul getVariable "Parent")) call BIS_fnc_log;
+  [_newORBATModul, _unit] call BIS_fnc_moduleStrategicMapORBAT;
 
+  LOG_INFO("test");
 
 } else {
   //TODO ServerCall von main
