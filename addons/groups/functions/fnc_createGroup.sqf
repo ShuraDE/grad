@@ -18,5 +18,6 @@ _newORBATModul setVariable ["Parent", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >>
 //IFUNC("moduleStrategicMapORBAT");
 
 // TODO keine ausgabe im log :-/
-diag_log "diag_log string out";
+"fnc_log out" call BIS_fnc_log;
+diag_log str "diag_log string out";
 diag_log IFUNC(moduleStrategicMapORBAT);
