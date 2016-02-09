@@ -15,7 +15,7 @@
 
 //entfernen++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef CBA_DEBUG_SYNCHRONOUS
-      #define CBA_DEBUG_SYNCHRONOUS(var1,var2,var3) [var1,var2,var3] call CBA_fnc_log
+      #define CBA_DEBUG_SYNCHRONOUS(var1,var2,var3) [var1,var2,var3] call CBA_fnc_mlog
       #define PATHDEBUG(var1) QUOTE(PATHTOF(functions\DOUBLES(fnc,var1).sqf))
 #endif
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -34,7 +34,9 @@
 
 //By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
 #ifdef CBA_DEBUG_SYNCHRONOUS
-    #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
+ #ifndef CBA_fnc_mlog
+    #define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
+ #endif
 #endif
 
 #define LOG_WARN(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_log
