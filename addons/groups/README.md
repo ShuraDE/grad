@@ -1,23 +1,23 @@
-Group Management
-
-Aktuell wird BFT und ab und an in Kombination mit Dynamic Groups verwendet.
-
-Schwächen der einzelnen Systeme
-BFT:
+Group Management<br/>
+<br/>
+Aktuell wird BFT und ab und an in Kombination mit Dynamic Groups verwendet.<br/>
+<br/>
+Schwächen der einzelnen Systeme<br/>
+BFT:<br/>
 * fixe Markergrößen/-typen
 * Sync delay
-Dynamic Groups
+Dynamic Groups<br/>
 * ist aktuell nur zufällige insignia
 * unterstützt afaik nicht ORBAT
-ORBAT
+ORBAT<br/>
 * benötigt config, einzeln eingeschränkt dynamisch
 
-Ziel:
-Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.
+Ziel:<br/>
+Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.<br/>
 
-
-
-
+<br/>
+<br/>
+<br/>
 
 grob planung "groups"
 ohne tests, erster entwurf
