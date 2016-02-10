@@ -6,6 +6,24 @@ description.ext +allowFunctionsRecompile = 1;
 "grad_fnc_createNewGroup" call BIS_fnc_recompile;
 
 
+orbat class from (maybe param instead default?)
+missionConfig if set
+configfile
+
+groupdata[]
+arma grp
+orbat hashmap key
+insig
+freq[]
+1
+2
+
+
+hashmap (seperate pro root ?)
+key = künstlicher schlüssel (lfdnr)
+value[] = [orbat_entry_class, hashmapParentKey, orbat_modul, [hashmapChildKeys]]
+
+
 BIS_fnc_ORBATAddGroupOverlay
 /*
 
