@@ -13,13 +13,12 @@
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
 
-/*//entfernen++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//entfernen++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #ifndef CBA_DEBUG_SYNCHRONOUS
-      #define CBA_DEBUG_SYNCHRONOUS(var1,var2,var3) [var1,var2,var3] call CBA_fnc_mlog
-      #define PATHDEBUG(var1) QUOTE(PATHTOF(functions\DOUBLES(fnc,var1).sqf))
+      #define CBA_DEBUG_SYNCHRONOUS 10
 #endif
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*/
+
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
 #ifdef DISABLE_COMPILE_CACHE
@@ -37,6 +36,12 @@
     #define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
 #endif
 
-#define LOG_WARN(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_log
-#define LOG_INFO(MESSAGE) [THIS_FILE_, __LINE__, ('INFO: ' + MESSAGE)] call CBA_fnc_log
-#define LOG_ERR(MESSAGE)  [THIS_FILE_, __LINE__, "ERROR", MESSAGE] call CBA_fnc_error;
+#ifdef CBA_fnc_mlog
+    #define LOG_WARN(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_mlog
+    #define LOG_INFO(MESSAGE) [THIS_FILE_, __LINE__, ('INFO: ' + MESSAGE)] call CBA_fnc_mlog
+    #define LOG_ERR(MESSAGE)  [THIS_FILE_, __LINE__, "ERROR", MESSAGE] call CBA_fnc_mlog
+#endif
+
+#ifdef CBA_DEBUG_SYNCHRONOUS
+   LOG_INFO("deine Nachricht an die Welt")
+#endif
