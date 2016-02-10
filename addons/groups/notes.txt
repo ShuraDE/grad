@@ -1,9 +1,65 @@
 get group data
 [configFile >> "cfgORBAT" >> "B_HQ"] call BIS_fnc_ORBATGetGroupParams
 
-
-
-
 // damit funktionen zur laufzeit angepasst werden können
 description.ext +allowFunctionsRecompile = 1;
 "grad_fnc_createNewGroup" call BIS_fnc_recompile;
+
+
+BIS_fnc_ORBATAddGroupOverlay
+/*
+
+	Description:
+	Register texture(s) to be displayed over CfgORBAT group.
+
+	Parameter(s):
+		0: CONFIG - path to group in CfgORBAT.
+		1: STRING - texture
+		2: ARRAY - color in format [R,G,B,A]
+		3: NUMBER - original icon width multiplier
+		4: NUMBER - original icon height multiplier
+		5: NUMBER - angle
+		6: STRING - text
+		7: BOOL - shadow
+
+	Returns:
+	NUMBER - overlay ID (used by BIS_fnc_ORBATRemoveGroupOverlay)
+*/
+
+BIS_fnc_ORBATGetGroupParams
+/*
+
+	Description:
+	Return group params from CfgORBAT
+
+	Parameter(s):
+		0: CONFIG - path to group in CfgORBAT
+
+	Returns:
+	ARRAY
+*/
+
+
+
+BIS_fnc_ORBATSetGroupParams
+Description:
+Override group params from CfgORBAT.
+
+Parameter(s):
+  0: NUMBER or STRING - ID (e.g., 1 to result in "1st", or a specific string)
+  1: STRING - size as a class from CfgChainOfCommand > Sizes (e.g., "Platoon")
+  2: STRING - type as a class from CfgChainOfCommand > Types (e.g., "Infantry")
+  3: STRING - side as a class from CfgChainOfCommand > Sides (e.g., "West")
+  4: STRING - name. Passed arguments are: %1 - ID, %2 - type, %3 - size)
+  5: STRING - short name. Passed arguments are: %1 - ID, %2 - type, %3 - size)
+  6: STRING - texture. Can be link to a file or a class from CfgMarkers
+  7: NUMBER - texture size coeficient. 1 is the default size
+  8: STRING - insignia displayed in tooltip and in the ORBAT viewer background
+  9: ARRAY - texture color in format RGBA
+  10: STRING - commander name. Can be the name directly or a class from CfgWorlds > GenericNames
+  11: STRING - commander rank.
+  12: STRING - description
+  13: ARRAY - assets. Items are ARRAYs in format [vehicleClass:STRING,count:NUMBER]
+
+Returns:
+BOOL
