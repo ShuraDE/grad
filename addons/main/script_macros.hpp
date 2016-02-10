@@ -28,8 +28,14 @@
 //By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
 
 //#define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
-#define GA_fnc_LOG { params ["_file","_lineNum","_addon","_message"]; diag_log [(toUpper (str _addon)),diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
+#define GA_fnc_LOG { params ["_file","_lineNum","_addon","_message"]; diag_log [_addon,diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
 
+#define LOG_FORMAT(module,level,file,lnr, message) FORMAT_4(QUOTE([GRAD] (module) %1 %3|%4: %2),level,file,lnr,message)
+#define LOG_BASE(module,level,message) diag_log text LOG_FORMAT(module,level,__FILE__, __LINE__,message)
+#define LOG_ERR(message) LOG_BASE(COMPONENT,"ERROR",message)
+/*
+//#define LOG(COMP, MESSAGE)  [__FILE__, __LINE__, COMP,('WARNING: ' + MESSAGE)] call GA_fnc_LOG
+#define LOG_INFO(MESSAGE) LOG(ADDON, 'INFO: ' + MESSAGE)
 #define LOG_WARN(MESSAGE) [__FILE__, __LINE__, ADDON,('WARNING: ' + MESSAGE)] call GA_fnc_LOG
-#define LOG_INFO(MESSAGE) [__FILE__, __LINE__, ADDON,('INFO: ' + MESSAGE)] call GA_fnc_LOG
 #define LOG_ERR(MESSAGE)  [__FILE__, __LINE__, ADDON,('ERROR: ' + MESSAGE)] call GA_fnc_LOG
+*/

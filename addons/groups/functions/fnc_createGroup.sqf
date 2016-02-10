@@ -3,7 +3,7 @@ private ["_newORBATModul","_side_logic","_group_logic"];
 params ["_unit"];
 
 if (isNil "_unit") exitWith {LOG_ERR("Keine Einheit übergeben");};
-if (!isServer) exitWith {LOG_INFO("Aufruf nur als Server");};
+if (!isServer) exitWith {LOG_ERR("Aufruf nur als Server");};
 
 _side_logic = createCenter sidelogic;
 _group_logic = createGroup _side_logic;
@@ -21,4 +21,4 @@ _newORBATModul setVariable ["Parent", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >>
 "fnc_log out" call BIS_fnc_log;
 diag_log str "diag_log string out";
 //diag_log IFUNC(moduleStrategicMapORBAT);
-LOG_INFO("TEST B_log");
+LOG_ERR("TEST B_log");
