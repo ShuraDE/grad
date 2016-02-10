@@ -30,6 +30,6 @@
 //#define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
 #define GA_fnc_LOG { params ["_file","_lineNum","_addon","_message"]; diag_log [(toUpper (str _addon)),diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
 
-#define LOG_WARN(MESSAGE) [_FILE_, __LINE__, ADDON,('WARNING: ' + MESSAGE)] call GA_fnc_LOG
-#define LOG_INFO(MESSAGE) [_FILE_, __LINE__, ADDON,('INFO: ' + MESSAGE)] call GA_fnc_LOG
-#define LOG_ERR(MESSAGE)  [_FILE_, __LINE__, ADDON,('ERROR: ' + MESSAGE)] call GA_fnc_LOG
+#define LOG_WARN(MESSAGE) [__FILE__, __LINE__, ADDON,('WARNING: ' + MESSAGE)] call GA_fnc_LOG
+#define LOG_INFO(MESSAGE) [__FILE__, __LINE__, ADDON,('INFO: ' + MESSAGE)] call GA_fnc_LOG
+#define LOG_ERR(MESSAGE)  [__FILE__, __LINE__, ADDON,('ERROR: ' + MESSAGE)] call GA_fnc_LOG
