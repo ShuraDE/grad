@@ -34,9 +34,7 @@
 
 //By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
 #ifdef CBA_DEBUG_SYNCHRONOUS
- #ifndef CBA_fnc_mlog
-    #define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
- #endif
+    #define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
 #endif
 
 #define LOG_WARN(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_log
