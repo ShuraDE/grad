@@ -26,11 +26,11 @@ class CfgFunctions
 				file = "\y\grad\addons\groups\functions\fnc_groupLeave.sqf";
 			};
 			class setFrequency {
-				description = "Define new Frequency";
+				description = "Define new Frequency (JIP)";
 				file = "\y\grad\addons\groups\functions\fnc_setFrequency.sqf";
 			};
 			class setInsignia {
-				description = "Define Insignia";
+				description = "Define Insignia (JIP)";
 				file = "\y\grad\addons\groups\functions\fnc_setInsignia.sqf";
 			};
 			class groupRebuild {
