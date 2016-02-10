@@ -19,20 +19,5 @@ Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.<b
 <br/>
 <br/>
 
-grob planung "groups"
-ohne tests, erster entwurf
-
-_client callable functions
-createGroup (name)
-selectInsignia (group, insignia)
-inviteToGroup (player, group)
-becomeLeader (player)
-leaveGroup (player)
-joinGroup (player, group)
-modifyGroup (size[=icon], type[=icon], color, name,
-
-_server functions
-newMemberInGroup (size überprüfung, insignia broadcast)
-newLeader
-newJIPConnected (share setup if necessary )
-....
+grob planung "groups"<br/>
+ohne tests, erster entwurf<br/>
