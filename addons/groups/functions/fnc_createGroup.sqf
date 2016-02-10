@@ -14,7 +14,7 @@ _unit synchronizeObjectsAdd [_newORBATModul];
 _newORBATModul setVariable ["Path", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >> ""B_COMM"" >> ""B_S1"""];
 _newORBATModul setVariable ["Parent", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >> ""B_COMM"""];
 
-[_newORBATModul, [_unit]] call IFUNC(moduleStrategicMapORBAT);
+[_newORBATModul, [_unit]] call BFUNC(moduleStrategicMapORBAT);
 //IFUNC("moduleStrategicMapORBAT");
 
 // TODO keine ausgabe im log :-/
