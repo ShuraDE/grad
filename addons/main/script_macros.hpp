@@ -13,12 +13,6 @@
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
 
-//entfernen++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#ifndef CBA_DEBUG_SYNCHRONOUS
-      #define CBA_DEBUG_SYNCHRONOUS 10
-#endif
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
 #ifdef DISABLE_COMPILE_CACHE
@@ -32,12 +26,10 @@
 #define GRAD_isHC (!hasInterface && !isDedicated)
 
 //By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
-#ifdef CBA_DEBUG_SYNCHRONOUS
-    #define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
-#endif
 
-#ifdef CBA_fnc_mlog
-    #define LOG_WARN(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_mlog
-    #define LOG_INFO(MESSAGE) [THIS_FILE_, __LINE__, ('INFO: ' + MESSAGE)] call CBA_fnc_mlog
-    #define LOG_ERR(MESSAGE)  [THIS_FILE_, __LINE__, "ERROR", MESSAGE] call CBA_fnc_mlog
-#endif
+//#define CBA_fnc_mlog { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
+#define GA_fnc_LOG { params ["_file","_lineNum","_addon","_message"]; diag_log [(toUpper (str _addon)),diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
+
+#define LOG_WARN(MESSAGE) [_FILE_, __LINE__, ADDON,('WARNING: ' + MESSAGE)] call GA_fnc_LOG
+#define LOG_INFO(MESSAGE) [_FILE_, __LINE__, ADDON,('INFO: ' + MESSAGE)] call GA_fnc_LOG
+#define LOG_ERR(MESSAGE)  [_FILE_, __LINE__, ADDON,('ERROR: ' + MESSAGE)] call GA_fnc_LOG
