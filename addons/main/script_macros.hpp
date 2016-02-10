@@ -7,8 +7,8 @@
 
 #define SMEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)  //MOD Function (Module Cross)
 #define SMIFUNC(var1) TRIPLES(ADDON,fnc,var1) //MOD Function (Module Intern)
-#define BFUNC(var1) TRIPLES(BIS,fnc,var1)   // BIS Function
-#define CFUNC(var1) TRIPLES(CBA,fnc,var1)  //CBA Function
+#define BISFUNC(var1) TRIPLES(BIS,fnc,var1)   // BIS Function
+#define CBAFUNC(var1) TRIPLES(CBA,fnc,var1)  //CBA Function
 
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
