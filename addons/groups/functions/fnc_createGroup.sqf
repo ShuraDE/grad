@@ -21,3 +21,4 @@ _newORBATModul setVariable ["Parent", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >>
 "fnc_log out" call BIS_fnc_log;
 diag_log str "diag_log string out";
 //diag_log IFUNC(moduleStrategicMapORBAT);
+LOG_INFO("TEST B_log");
