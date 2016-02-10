@@ -1,1 +1,1 @@
-#include "\y\grad\addons\groups\script_component.hpp"
+#include "\y\grad\addons\test\script_component.hpp"

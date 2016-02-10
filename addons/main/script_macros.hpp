@@ -32,5 +32,5 @@
 #define LOG_WARN(message) LOG_BASE(COMPONENT,"WARN",message)
 
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
-#define RE_SRV(params,function) params remoteExecCall [function, 2]
-#define RE_SRV_PERSIS(params,function) params remoteExecCall [function, 2, true]
+#define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [str _function, 2]}}
+#define RE_SRV_TST(params,function) params remoteExecCall [str function, 2]
