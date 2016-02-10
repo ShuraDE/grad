@@ -1,0 +1,9 @@
+get group data
+[configFile >> "cfgORBAT" >> "B_HQ"] call BIS_fnc_ORBATGetGroupParams
+
+
+
+
+// damit funktionen zur laufzeit angepasst werden können
+description.ext +allowFunctionsRecompile = 1;
+"grad_fnc_createNewGroup" call BIS_fnc_recompile;
