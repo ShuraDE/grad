@@ -41,7 +41,3 @@
     #define LOG_INFO(MESSAGE) [THIS_FILE_, __LINE__, ('INFO: ' + MESSAGE)] call CBA_fnc_mlog
     #define LOG_ERR(MESSAGE)  [THIS_FILE_, __LINE__, "ERROR", MESSAGE] call CBA_fnc_mlog
 #endif
-
-#ifdef CBA_DEBUG_SYNCHRONOUS
-   LOG_INFO("deine Nachricht an die Welt")
-#endif
