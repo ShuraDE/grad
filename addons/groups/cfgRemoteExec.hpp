@@ -3,7 +3,7 @@ class CfgRemoteExec
         class Functions
         {
                 mode = 1;
-                jip = 1;                                       //no functions can use jip
+                jip = 1;
 
                 class grad_groups_fnc_groupCreate {
                   allowedTargets = 2;
