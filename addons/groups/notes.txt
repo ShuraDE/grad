@@ -1,5 +1,8 @@
+https://drive.google.com/drive/folders/0B0XacMCvodBeZ0ctRWlPRWFtWWs
+
 get group data
 [configFile >> "cfgORBAT" >> "B_HQ"] call BIS_fnc_ORBATGetGroupParams
+
 
 // damit funktionen zur laufzeit angepasst werden können
 description.ext +allowFunctionsRecompile = 1;
