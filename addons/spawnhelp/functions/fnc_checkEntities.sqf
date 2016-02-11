@@ -12,7 +12,7 @@ Parameters: [position/object,typeName/Array of Strings,Radius,(optional: true - 
 Returns: Array with Objects / Number
 
 Examples:
-          _arrow = [_position,["Man","Static","Truck"],200] call GRAD_spawnhelp_fnc_setDebugMarker;
+          _arrow = [_position,["Man","Static","Truck"],200] call GRAD_spawnhelp_fnc_checkEntities;
 
 Author: Fry
 
