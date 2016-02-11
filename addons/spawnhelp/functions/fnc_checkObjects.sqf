@@ -7,7 +7,7 @@ Description: Find Objects with given radius.
 
 Parameters: [position,Array of Strings,Radius,(optional: true - List Objects)]
 
-           Array of Strings - ["Man","Truck"]
+           Array of Strings(TYPENAME-ARRAY) - ["Man","Truck"]
 
 Returns: Array with Objects / Number
 
