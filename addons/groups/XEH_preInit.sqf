@@ -1,4 +1,4 @@
-#include "\y\grad\addons\groups\script_component.hpp"
+#include "script_component.hpp"
 /* ----------------------------------------------------------------------------
 Function: TAG_fnc_name
 
@@ -17,3 +17,4 @@ Author:
 
 ---------------------------------------------------------------------------- */
 diag_log "xeh_preInit";
+missionNamespace setVariable ["xeh_test", "+1", true];

@@ -1,4 +1,4 @@
-#include "\y\grad\addons\groups\script_component.hpp"
+#include "script_component.hpp"
 /* ----------------------------------------------------------------------------
 Function: TAG_fnc_name
 

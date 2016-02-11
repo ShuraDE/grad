@@ -11,6 +11,7 @@ class CfgPatches {
         authorUrl = "https://gruppe-adler.de";
     };
 };
-#include "cfgEventshandlers.hpp"
+#include "cfgFactionClasses.hpp"
+#include "cfgEventhandlers.hpp"
 #include "cfgORBAT.hpp"
 #include "cfgFunctions.hpp"
