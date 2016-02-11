@@ -3,7 +3,7 @@
 /* ----------------------------------------------------------------------------
 Function: GRAD_spawnhelp_fnc_setDebugMarker
 
-Description: Sets Arrows with different Colors to Position
+Description: Set a Arrow with different Colors to Position
 
 Parameters: [_position,_color_idx,(optional:true - House-/Ground Positions)]
             0 - Color Red
