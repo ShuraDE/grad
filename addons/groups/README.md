@@ -14,6 +14,7 @@ Dynamic Groups<br/>
 ORBAT<br/>
 * benötigt config, einzeln eingeschränkt dynamisch<br/>
 <br/>
+
 Ziel:<br/>
 Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.<br/>
 
