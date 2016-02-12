@@ -28,5 +28,8 @@ class CfgRemoteExec
                 class grad_groups_fnc_groupRebuild {
                   allowedTargets = 2;
                 };
+                class grad_groups_fnc_test {
+                  allowedTargets = 0;
+                };
         };
 };
