@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-
 class CfgPatches {
     class ADDON {
         units[] = {};
@@ -26,3 +25,4 @@ class CfgMods {
         action = "http://www.gruppe-adler.de/";
     };
 };
+#include "cfgVehicles.hpp"

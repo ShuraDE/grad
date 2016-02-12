@@ -13,5 +13,6 @@ class CfgPatches {
 };
 #include "cfgFactionClasses.hpp"
 #include "cfgEventhandlers.hpp"
+#include "cfgVehicles.hpp"
 #include "cfgORBAT.hpp"
 #include "cfgFunctions.hpp"
