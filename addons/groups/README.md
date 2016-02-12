@@ -6,9 +6,11 @@ Schwächen der einzelnen Systeme<br/>
 BFT:<br/>
 * fixe Markergrößen/-typen<br/>
 * Sync delay<br/>
+
 Dynamic Groups<br/>
 * ist aktuell nur zufällige insignia<br/>
 * unterstützt afaik nicht ORBAT<br/>
+
 ORBAT<br/>
 * benötigt config, einzeln eingeschränkt dynamisch<br/>
 <br/>
