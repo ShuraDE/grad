@@ -18,7 +18,7 @@
 #define CPORT DOUBLES(ADDON,comm)
 
 //activate CBA-MODUL
-#define START_XEH_FUNC = "If(isNil 'SLX_XEH_MACHINE')then{[] call CBA_fnc_preInit}";\
+#define START_XEH_FUNC init = "If(isNil 'SLX_XEH_MACHINE')then{[] call CBA_fnc_preInit}";\
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
