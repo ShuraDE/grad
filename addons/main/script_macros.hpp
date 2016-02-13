@@ -14,7 +14,8 @@
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
 
-
+//Name of Communication Logic
+#define CPORT DOUBLES(ADDON,comm)
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
