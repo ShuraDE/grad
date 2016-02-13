@@ -1,13 +1,26 @@
-class CfgVehicles {
-    class All {
-        class EventHandlers { EXTENDED_EVENTHANDLERS };
-    };
-
-    // Custom object that can be used to force XEH initialization even if no XEH compatible object is on the Map.
-    class Logic;
-    class SLX_XEH_Logic: Logic {
-        displayName = "XEH (backup) Initialization Logic";
-        vehicleClass = "Modules";
-        class EventHandlers { EXTENDED_EVENTHANDLERS };
-    };
-}; 
+class CfgVehicles
+{
+  class All;
+	class Air;
+	class Man;
+	class AllVehicles: All
+	{
+		class EventHandlers { EXTENDED_EVENTHANDLERS };
+	};
+	class CAManBase: Man
+	{
+		class EventHandlers { EXTENDED_EVENTHANDLERS };
+	};
+	class Helicopter: Air
+	{
+		class EventHandlers { EXTENDED_EVENTHANDLERS };
+	};
+	class Plane: Air
+	{
+		class EventHandlers { EXTENDED_EVENTHANDLERS };
+	};
+	class ParachuteBase: Helicopter
+	{
+		class EventHandlers { EXTENDED_EVENTHANDLERS };
+	};
+};
