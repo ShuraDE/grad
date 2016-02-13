@@ -1,4 +1,3 @@
-
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
@@ -16,6 +15,7 @@
 
 //Name of Communication Logic
 #define CPORT DOUBLES(ADDON,comm)
+
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
