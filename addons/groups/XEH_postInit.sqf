@@ -1,6 +1,6 @@
 #include "script_component.hpp"
-//addon = false;
-[\grad\addons\groups\functions\fnc_test.sqf, 'grad_groups_fnc_test'] call SLX_XEH_COMPILE_NEW;
+//ADDON = false;
+//[\grad\addons\groups\functions\fnc_test.sqf, 'grad_groups_fnc_test'] call SLX_XEH_COMPILE_NEW;
 LOG_INFO("postInit");
-//PREP(test);
-//addon = true;
+PREP(test);
+//ADDON = true;
