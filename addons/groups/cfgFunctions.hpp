@@ -2,13 +2,6 @@ class CfgFunctions
 {
 	class ADDON
 	{
-		class test {
-			class test {
-				//preInit = 1;
-				description = "Test";
-				file = "\y\grad\addons\groups\functions\fnc_test.sqf";
-			};
-		};
 		class orbat
 		{
 			class createNewGroup {
