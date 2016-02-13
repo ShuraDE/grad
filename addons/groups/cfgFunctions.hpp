@@ -4,7 +4,7 @@ class CfgFunctions
 	{
 		class test {
 			class test {
-				preInit = 1;
+				//preInit = 1;
 				description = "Test";
 				file = "\y\grad\addons\groups\functions\fnc_test.sqf";
 			};
