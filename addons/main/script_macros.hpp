@@ -17,7 +17,6 @@
 //Name of Communication Logic
 #define CPORT DOUBLES(ADDON,comm)
 
-
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
 #ifdef DISABLE_COMPILE_CACHE
