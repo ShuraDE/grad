@@ -10,4 +10,4 @@ class CfgVehicles {
         vehicleClass = "Modules";
         class EventHandlers { EXTENDED_EVENTHANDLERS };
     };
-};
+}; 
