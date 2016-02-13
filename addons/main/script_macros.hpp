@@ -1,4 +1,3 @@
-
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
@@ -16,6 +15,9 @@
 
 //Name of Communication Logic
 #define CPORT DOUBLES(ADDON,comm)
+
+//activate CBA-MODUL
+#define START_XEH_FUNC init = "If(isNil 'SLX_XEH_MACHINE')then{[] call CBA_fnc_preInit}";
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
