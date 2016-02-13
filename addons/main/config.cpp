@@ -25,6 +25,6 @@ class CfgMods {
         action = "http://www.gruppe-adler.de/";
     };
 };
-START_XEH_FUNC
+
 #include "cfgEventHandlers.hpp"
 #include "cfgVehicles.hpp"
