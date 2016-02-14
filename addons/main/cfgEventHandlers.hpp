@@ -7,6 +7,6 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_Init_EventHandlers {
     class ADDON {
-          Init = QUOTE(call SMIFUNC(initprocess));
+          Init = QUOTE(spawn SMIFUNC(initprocess));
     };
 }
