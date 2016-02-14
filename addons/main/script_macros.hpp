@@ -16,15 +16,22 @@
 //Name of Communication Logic
 #define CPORT DOUBLES(ADDON,comm)
 
+//New define of Compile_File & Path Macro
+#define PATHTOMSYS(var1,var2,var3) \MAINPREFIX\PREFIX\SUBPREFIX\##var1\##var2\##var3
+#define COMPILE_FILE3(var1) compile preProcessFileLineNumbers var1
+
+//New PREP MACRO
+#define PRECO(fncName) SMIFUNC(fncName) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,fncName).sqf)))
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
+//not used Macros about Testtime______________________________________________________________________________________________________
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
     #define PREP(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
-
+//____________________________________________________________________________________________________________________________________
 #define GRAD_isHC (!hasInterface && !isDedicated)
 
 // TODO brauchen wir das noch ?
