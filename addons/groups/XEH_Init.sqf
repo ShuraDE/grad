@@ -2,3 +2,4 @@
 LOG_INFO("xeh init groups");
 
 PRECO(test)
+call SMIFUNC(test);
