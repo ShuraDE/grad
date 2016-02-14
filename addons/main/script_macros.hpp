@@ -43,6 +43,7 @@
     #define LOG_DEBUG(message)
 #endif
 
+// TODO test hash macros
 //hash macros
 #define HASH_NEW(array, default) { params["_array","_default"]; [_array, _default] call CBA_fnc_hashCreate; } //creates a new hash [[]]
 #define HASH_GET(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashGet; } //get value entry from key
