@@ -35,22 +35,25 @@
 #define LOG_ERR(message) LOG_BASE(COMPONENT,"ERROR",message)
 #define LOG_INFO(message) LOG_BASE(COMPONENT,"INFO",message)
 #define LOG_WARN(message) LOG_BASE(COMPONENT,"WARN",message)
+
 #ifdef DEBUG_MODE_FULL
     #define LOG_DEBUG(message) LOG_BASE(COMPONENT,"DEBUG",message)
 #else
-//kein output erzeugen
+    //kein output erzeugen
     #define LOG_DEBUG(message)
 #endif
 
 //hash macros
-#define HASH_NEW(array, default) { params["_array","_default"]; [_array, _default] call CBA_fnc_hashCreate; }
-#define HASH_GET(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashGet; }
-#define HASH_SET(array, key, value) { params["_array","_key","_value"]; [_array, _key, _value] call CBA_fnc_hashSet; }
-#define HASH_HAS_KEY(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashHasKey; }
-#define HASH_REM(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashRem; }
-#define HASH_FOREACH(array, code) { params["_array","_code"]; [_array, _code] call CBA_fnc_hashEachPair; }
-#define HASH_IS_HASH(object) { params["_object"]; _object call CBA_fnc_isHash; }
+#define HASH_NEW(array, default) { params["_array","_default"]; [_array, _default] call CBA_fnc_hashCreate; } //creates a new hash [[]]
+#define HASH_GET(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashGet; } //get value entry from key
+#define HASH_SET(array, key, value) { params["_array","_key","_value"]; [_array, _key, _value] call CBA_fnc_hashSet; } //set new value with given key, replace if exists
+#define HASH_HAS_KEY(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashHasKey; } //check key exists, return true if exists
+#define HASH_REM(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashRem; } //remove entry from hash table with given key
+#define HASH_FOREACH(array, code) { params["_array","_code"]; [_array, _code] call CBA_fnc_hashEachPair; } // execute code each element. using _key and _value
+#define HASH_IS_HASH(object) { params["_object"]; _object call CBA_fnc_isHash; } // return true if is hashtable
 
+//remote execute macros
+// TODO check
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
 #define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [str _function, 2]}}
 #define RE_SRV_TST(params,function) params remoteExecCall [str function, 2]
