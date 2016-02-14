@@ -21,7 +21,7 @@
 #define COMPILE_FILE3(var1) compile preProcessFileLineNumbers var1
 
 //New PREP MACRO
-#define PRECO(fncName) SMIFUNC(fncName) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,fncName).sqf)))
+#define PRECO(var1) SMIFUNC(var1) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,var1).sqf)))
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
