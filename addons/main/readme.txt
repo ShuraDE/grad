@@ -1,6 +1,7 @@
 Aktuelle Baustellen
 
-* PREP Makro funkt net (XEH init files -> funktion verweis)
+* PREP Makro funkt net (XEH init files -> funktion verweis) - (Neue PRECO eingefügt- Test und späterer Austausch mit PREP: Prüfen des neuen XEH-SLX_XEH_COMPILE Verweis)
+
 * RE server call funkt nicht wie erwartet
 ** modul test -> fnc_test server call fnc_test2 (_ret = RE_SRV_TST(_this,SMIFUNC(test2));)
 ** script_macos.hpp in main ->
