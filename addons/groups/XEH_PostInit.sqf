@@ -5,6 +5,6 @@ LOG_INFO(TEST_PATH(test));
 LOG_INFO(TEST_PATH(test));
 //ADDON = false;
 //PRECO(test)
-SMIFUNC(groupTypeSelection) = compile preProcessFileLineNumbers "\y\grad\addons\groups\functions\fnc_groupTypeSelection.sqf";
-call SMIFUNC(groupTypeSelection);
+SMIFUNC(test) = compile preProcessFileLineNumbers "\y\grad\addons\groups\functions\fnc_test.sqf";
+call SMIFUNC(test);
 //ADDON = true;
