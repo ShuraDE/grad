@@ -11,7 +11,7 @@ Parameters: [position/object,Array of Strings,Radius,(optional: true - List Obje
 Returns: Array with Objects / Number
 
 Examples:
-          _arrow = [player,["House","Tree","Bush"],200] call GRAD_spawnhelp_fnc_checkTerrainObj;
+          _list = [player,["House","Tree","Bush"],200,true] call GRAD_spawnhelp_fnc_checkTerrainObj;
 
 Author: Fry
 
