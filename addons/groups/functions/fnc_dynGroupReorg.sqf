@@ -16,25 +16,31 @@ Examples:
 Author:
 
 ---------------------------------------------------------------------------- */
-private ["_addGroup", "_grpCounter", "_leader", "_data"];
+private ["_addGroup", "_leader", "_data", "_sideHash"];
 
-LOG_DEBUG("EXECUTE DYN GRP REPORG");
+LOG_DEBUG("Register native groups in dynamic groups");
 
 if (isServer) then {
-  _grpCounter = 0;
 
   //add group to dynamic group array
   _addGroup = {
       params ["_group","_grpCounter"];
      _leader = leader _group;
-     _data   = [nil, FORMAT["GRP %1", _grpCounter], false]; // [<Insignia>, <Group Name>, <Private>]
+     _data   = [nil, FORMAT["%1", [_grpCounter,"default"] call SMIFUNC(getSpellingAlphabetName)], false]; // [<Insignia>, <Group Name>, <Private>]
 
      ["RegisterGroup", [_group, _leader, _data]] call BIS_fnc_dynamicGroups;
   };
+  _sideHash = HASH_NEW(_sideHash, 0);
 
-  //get all groups, add via grp function ^
+  //get all groups for each side, add grp via _addGroup
   {
-    _grpCounter = _grpCounter +1;
-    [_x, _grpCounter] spawn _addGroup;
+    if (HASH_HAS_KEY(_sideHash, (side leader _x))) then {
+      LOG_DEBUG("increment hash for side");
+      _sideHash = HASH_SET(_sideHash, (side leader _x), HASH_GET(_sideHash, (side leader _x)) + 1);
+    } else {
+      LOG_DEBUG("create new hash for side");
+      _sideHash = HASH_SET(_sideHash, (side leader _x), 1);
+    };
+    [_x, (HASH_GET(_sideHash, (side leader _x)))] spawn _addGroup;
   } forEach allGroups;
 };

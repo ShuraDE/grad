@@ -45,13 +45,14 @@
 
 // TODO test hash macros
 //hash macros
-#define HASH_NEW(array, default) { params["_array","_default"]; [_array, _default] call CBA_fnc_hashCreate; } //creates a new hash [[]]
-#define HASH_GET(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashGet; } //get value entry from key
-#define HASH_SET(array, key, value) { params["_array","_key","_value"]; [_array, _key, _value] call CBA_fnc_hashSet; } //set new value with given key, replace if exists
-#define HASH_HAS_KEY(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashHasKey; } //check key exists, return true if exists
-#define HASH_REM(array, key) { params["_array","_key"]; [_array, _key] call CBA_fnc_hashRem; } //remove entry from hash table with given key
-#define HASH_FOREACH(array, code) { params["_array","_code"]; [_array, _code] call CBA_fnc_hashEachPair; } // execute code each element. using _key and _value
-#define HASH_IS_HASH(object) { params["_object"]; _object call CBA_fnc_isHash; } // return true if is hashtable
+//([] call EFUNC(common,hashCreate))
+#define HASH_NEW(haarray, defValue)         ([haarray, defValue] call CBAFUNC(hashCreate)) //creates a new hash [[]]
+#define HASH_GET(haarray, keyValue)         ([haarray, keyValue] call CBAFUNC(hashGet)) //get value entry from key
+#define HASH_SET(haarray, keyValue, value)  ([haarray, keyValue, value] call CBAFUNC(hashSet)) //set new value with given key, replace if exists
+#define HASH_HAS_KEY(haarray, keyValue)     ([haarray, keyValue] call CBAFUNC(hashHasKey)) //check key exists, return true if exists
+#define HASH_REM(haarray, keyValue)         ([haarray, keyValue] call CBAFUNC(hashRem)) //remove entry from hash table with given key
+#define HASH_FOREACH(haarray, codeValue)    ([haarray, codeValue] call CBAFUNC(hashEachPair)) // execute code each element. using _key and _value
+#define HASH_IS_HASH(object)                (_object call CBAFUNC(isHash)) // return true if is hashtable
 
 //remote execute macros
 // TODO check
