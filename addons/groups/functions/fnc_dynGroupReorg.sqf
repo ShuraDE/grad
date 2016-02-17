@@ -18,7 +18,7 @@ Author:
 ---------------------------------------------------------------------------- */
 private ["_addGroup", "_grpCounter", "_leader", "_data"];
 
-LOG_DEBUG("EXECUTE DYN GRP REPORG");
+LOG_DEBUG("Register native groups in dynamic groups");
 
 if (isServer) then {
   _grpCounter = 0;

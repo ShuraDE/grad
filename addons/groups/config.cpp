@@ -17,3 +17,4 @@ class CfgPatches {
 #include "cfgVehicles.hpp"
 #include "cfgORBAT.hpp"
 #include "cfgFunctions.hpp"
+#include "cfgSpellingAlphabet.hpp"
