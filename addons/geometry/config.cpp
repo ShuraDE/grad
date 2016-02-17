@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"grad_main","grad_spawnhelp"};
         version = VERSION;
-        author[] = {"Fry","Shura"};
+        author[] = {"Fry"};
         authorUrl = "https://gruppe-adler.de";
     };
 };

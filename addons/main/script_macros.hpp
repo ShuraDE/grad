@@ -16,30 +16,14 @@
 //Name of Communication Logic
 #define CPORT DOUBLES(ADDON,comm)
 
-//New define of Compile_File & Path Macro
-#define PATHTOMSYS(var1,var2,var3) \MAINPREFIX\PREFIX\SUBPREFIX\##var1\##var2\##var3
-#define PATHTOMSYS2(var1) \MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\functions\DOUBLES(fnc,var1).sqf
-#define COMPILE_FILE4(var1) COMPILE_FILE2_SYS(PATHTOMSYS2(var1))
-#define COMPILE_FILE3(var1) compile preProcessFileLineNumbers var1
-
-//New PREP MACRO
-//#define PRECO(var1) SMIFUNC(var1) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,'var1').sqf)))
-#define PRECO(var1) SMIFUNC(var1) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,var1).sqf)))
-#define PRECO2(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
-#define TEST_PATH(fncName) QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,fncName).sqf))
-#define TEST_COMP(fncName) QUOTE(DOUBLES(DOUBLES(compile,preprocessFileLineNumbers),PATHTOF(functions\DOUBLES(fnc,fncName).sqf)))
-
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
-
 
 //not used Macros about Testtime______________________________________________________________________________________________________
 #ifdef DISABLE_COMPILE_CACHE
-    #define PREP(fncName) SMIFUNC(fncName) = compile preProcessFileLineNumbers 'PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,fncName).sqf)'
-    //#define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+    #define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
-    #define PRECO2(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
+    #define PREP(fncName) [QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)), QFUNC(fncName)] call SLX_XEH_COMPILE_NEW
 #endif
-
 //____________________________________________________________________________________________________________________________________
 #define GRAD_isHC (!hasInterface && !isDedicated)
 

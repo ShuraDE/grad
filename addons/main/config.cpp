@@ -26,5 +26,4 @@ class CfgMods {
     };
 };
 
-#include "cfgEventHandlers.hpp"
-//#include "cfgVehicles.hpp"
+//#include "cfgEventHandlers.hpp"
