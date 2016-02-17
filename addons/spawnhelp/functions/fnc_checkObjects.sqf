@@ -12,7 +12,7 @@ Parameters: [position,Array of Strings,Radius,(optional: true - List Objects)]
 Returns: Array with Objects / Number
 
 Examples:
-          _arrow = [_position,["Static","house","Tank","Car","StaticWeapon"],200] call GRAD_spawnhelp_fnc_checkObjects;
+          _number = [_position,["Static","house","Tank","Car","StaticWeapon"],200] call GRAD_spawnhelp_fnc_checkObjects;
 
 Author: Fry
 
