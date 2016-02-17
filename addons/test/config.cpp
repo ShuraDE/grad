@@ -14,3 +14,4 @@ class CfgPatches {
 
 #include "cfgFunctions.hpp"
 #include "cfgRemoteExec.hpp"
+#include "cfgEventhandlers.hpp"

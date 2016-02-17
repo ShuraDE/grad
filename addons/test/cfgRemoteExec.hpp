@@ -2,12 +2,12 @@ class CfgRemoteExec
 {
         class Functions
         {
-                mode = 1;
+                mode = 2;
 
-                class grad_test_fnc_test {
+                class SMIFUNC(test) {
                   allowedTargets = 2;
                 };
-                class grad_test_fnc_test2 {
+                class SMIFUNC(test2) {
                   allowedTargets = 2;
                 };
         };

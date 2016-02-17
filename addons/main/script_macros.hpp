@@ -54,4 +54,6 @@
 // TODO check
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
 #define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [str _function, 2]}}
+#define RE_AT(params,function, target) params remoteExecCall [str function, target]
+#define RE_AT_JIP(params,function, target) params remoteExecCall [str function, target, true]
 #define RE_SRV_TST(params,function) params remoteExecCall [str function, 2]

@@ -1,5 +1,11 @@
 https://drive.google.com/drive/folders/0B0XacMCvodBeZ0ctRWlPRWFtWWs
 
+notwendige settings:
+* grouptype => none, dyngrp, dynorbat
+* incl KI => 0, 1
+* autogroup => 0, 1
+
+
 get group data
 [configFile >> "cfgORBAT" >> "B_HQ"] call BIS_fnc_ORBATGetGroupParams
 

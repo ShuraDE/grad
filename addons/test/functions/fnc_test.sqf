@@ -16,3 +16,6 @@ LOG_DEBUG("bis_fnc_mp");
 LOG_DEBUG("RE Makro");
 _ret = RE_SRV_TST(_this,SMIFUNC(test2));
 LOG_INFO(formatText ["RE %1", _ret]);
+
+LOG_DEBUG("call fnc test2");
+call SMIFUNC(test2);

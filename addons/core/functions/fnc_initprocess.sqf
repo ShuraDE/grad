@@ -5,7 +5,7 @@ LOG_DEBUG("core/initprocess");
 
 if (isNil (format["%1",CPORT])) then
 {
-	LOG_INFO("Create Communication Logic!");
+	LOG_DEBUG("Create Communication Logic!");
 	_center = createCenter sideLogic;
 	_group = createGroup _center;
 	CPORT = _group createUnit ["LOGIC", [0, 0, 0], [], 0, "NONE"];
