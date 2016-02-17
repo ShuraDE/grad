@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+LOG_INFO("test create orbat module");
+
 //testing
 private ["_newORBATModul","_side_logic","_group_logic"];
 params ["_unit"];

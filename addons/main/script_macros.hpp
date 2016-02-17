@@ -18,6 +18,7 @@
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
+
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
@@ -56,6 +57,6 @@
 // TODO check
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
 #define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [REMFUNC(function), 2]}}
-#define RE_AT(params,function, target) params remoteExecCall [str function, target]
-#define RE_AT_JIP(params,function, target) params remoteExecCall [str function, target, true]
+#define RE_AT(params,function, target) params remoteExecCall [REMFUNC(function), target]
+#define RE_AT_JIP(params,function, target) params remoteExecCall [REMFUNC(function), target, true]
 #define RE_SRV_TST(params,function) params remoteExecCall [REMFUNC(function), 2]
