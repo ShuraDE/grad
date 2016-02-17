@@ -11,7 +11,7 @@ Parameters: [position/object,Array of Strings,Radius,(optional: true - List Obje
 Returns: Array with Objects / Number
 
 Examples:
-          _arrow = [_position,["Static","house","Tank","Car","StaticWeapon"],200] call GRAD_spawnhelp_fnc_checkTerrainObj;
+          _arrow = [_position,["House","Tree","Bush"],200] call GRAD_spawnhelp_fnc_checkTerrainObj;
 
 Author: Fry
 
@@ -29,7 +29,7 @@ switch(typeName _center)do
 {
   case "OBJECT":{_arr = nearestTerrainObjects [_center, _types, _radius];};
   case "ARRAY":{If(count _center > 2 && (typeName (_center select 0) == "SCALAR") && (typeName (_center select 1) == "SCALAR"))then
-                { _xp = (_center select 0); _yp = (_center select 1); _arr = nearestTerrainObjects [[_xp,_yp], _types, _radius];};
+                { _xp = (_center select 0); _yp = (_center select 1); _arr = nearestTerrainObjects [[_xp,_yp,0], _types, _radius];};
                };
   default{};
 };
