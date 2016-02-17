@@ -19,4 +19,3 @@ _newORBATModul setVariable ["Parent", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >>
 [_newORBATModul, [_unit]] call BISFUNC(moduleStrategicMapORBAT);
 
 LOG_INFO("create new orbat module");
-LOG_WARN(QUOTE(call COMPILE_FILE(fnc_createGroup)));
