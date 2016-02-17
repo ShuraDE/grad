@@ -11,6 +11,7 @@
 #define CBAFUNC(var1) TRIPLES(CBA,fnc,var1)   //CBA Function#
 
 #define REMFUNC(var1) TRIPLES('ADDON,fnc,var1') //function name as string
+#define REMMCFUNC(var1,var2) TRIPLES('DOUBLES(PREFIX,var1),fnc,var2') //function name as string (Modul Cross)
 
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
@@ -57,6 +58,17 @@
 // TODO check
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
 #define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [REMFUNC(function), 2]}}
-#define RE_AT(params,function, target) params remoteExecCall [REMFUNC(function), target]
-#define RE_AT_JIP(params,function, target) params remoteExecCall [REMFUNC(function), target, true]
+#define RE_AT(params,function,target) params remoteExecCall [REMFUNC(function), target]
+#define REMC_AT(params,modul,function,target) params remoteExecCall [REMMCFUNC(modul,function), target]
+#define RE_AT_JIP(params,function,target) params remoteExecCall [REMFUNC(function), target, true]
+#define REMC_AT_JIP(params,modul,function,target) params remoteExecCall [REMMCFUNC(modul,function), target, true]
 #define RE_SRV_TST(params,function) params remoteExecCall [REMFUNC(function), 2]
+#define REMC_SRV_TST(params,modul,function) params remoteExecCall [REMMCFUNC(modul,function), 2]
+
+//<params> remoteExec [<function>,(<target>,<isPersistent>)];
+#define SRE_AT(params,function,target) params remoteExec [REMFUNC(function), target]
+#define SREMC_AT(params,modul,function,target) params remoteExec [REMMCFUNC(modul,function), target]
+#define SRE_AT_JIP(params,function,target) params remoteExec [REMFUNC(function), target, true]
+#define SREMC_AT_JIP(params,modul,function,target) params remoteExec [REMMCFUNC(modul,function), target, true]
+#define SRE_SRV_TST(params,function) params remoteExec [REMFUNC(function), 2]
+#define SREMC_SRV_TST(params,modul,function) params remoteExec [REMMCFUNC(modul,function), 2]
