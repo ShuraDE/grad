@@ -18,6 +18,8 @@
 
 //New define of Compile_File & Path Macro
 #define PATHTOMSYS(var1,var2,var3) \MAINPREFIX\PREFIX\SUBPREFIX\##var1\##var2\##var3
+#define PATHTOMSYS2(var1) \MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\functions\DOUBLES(fnc,var1).sqf
+#define COMPILE_FILE4(var1) COMPILE_FILE2_SYS(PATHTOMSYS2(var1))
 #define COMPILE_FILE3(var1) compile preProcessFileLineNumbers var1
 
 //New PREP MACRO
@@ -33,7 +35,8 @@
 
 //not used Macros about Testtime______________________________________________________________________________________________________
 #ifdef DISABLE_COMPILE_CACHE
-    #define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+    #define PREP(fncName) SMIFUNC(fncName) = compile preProcessFileLineNumbers 'PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,fncName).sqf)'
+    //#define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
     #define PREP(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
