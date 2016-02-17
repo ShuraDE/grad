@@ -4,7 +4,7 @@ private ["_ret"];
 LOG_INFO("test -1");
 
 
-
+//RE TESTS
 LOG_DEBUG("RE direct");
 _ret = _this remoteExecCall [REMFUNC(test2),2];
 //_ret = _this remoteExecCall ["grad_test_fnc_test2",2];
