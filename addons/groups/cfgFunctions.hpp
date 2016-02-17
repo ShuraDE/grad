@@ -9,6 +9,12 @@ class CfgFunctions
 				file = "\y\grad\addons\groups\functions\fnc_init.sqf";
 			};
 		};
+		class dynamicGroup {
+			class dynGroupReorg {
+				description = "transfer active groups to dynamic groups system";
+				file = "\y\grad\addons\groups\functions\fnc_dynGroupReorg.sqf";
+			}
+		}
 		class orbat
 		{
 			class createNewGroup {

@@ -22,7 +22,6 @@ LOG_DEBUG("INIT GROUPS ADDON");
 GVAR(GROUPTYPE) = 1;
 GVAR(GROUPKI) = 1;
 LOG_DEBUG(str _unit);
-LOG_DEBUG(str (_unit isKindOf "CAManBase"));
 LOG_DEBUG(str (isPlayer _unit));
 LOG_DEBUG(str name _unit);
 LOG_DEBUG((isPlayer _unit || GVAR(GROUPKI)==1));
@@ -36,7 +35,9 @@ switch (GVAR(GROUPTYPE)) do {
         ["Initialize", [true]] call BIS_fnc_dynamicGroups;
         INIT_GROUP_SERVER_DONE = true;
       };
+      //KI unsupported ?!?
       if (_unit isKindOf "CAManBase" && (isPlayer _unit || GVAR(GROUPKI)==1)) then {
+      //if (isPlayer _unit && local _unit) then {
         LOG_DEBUG(FORMAT["INIT DYN GROUP PLAYER %1", _unit]);
         ["InitializePlayer", [_unit, true]] call BIS_fnc_dynamicGroups;
       };
