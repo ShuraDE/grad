@@ -23,7 +23,6 @@
 #define COMPILE_FILE3(var1) compile preProcessFileLineNumbers var1
 
 //New PREP MACRO
-
 //#define PRECO(var1) SMIFUNC(var1) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,'var1').sqf)))
 #define PRECO(var1) SMIFUNC(var1) = COMPILE_FILE3(QUOTE(PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,var1).sqf)))
 #define PRECO2(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
@@ -38,7 +37,7 @@
     #define PREP(fncName) SMIFUNC(fncName) = compile preProcessFileLineNumbers 'PATHTOMSYS(COMPONENT,functions,DOUBLES(fnc,fncName).sqf)'
     //#define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
-    #define PREP(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
+    #define PRECO2(fncName) SMIFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
 
 //____________________________________________________________________________________________________________________________________
