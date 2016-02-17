@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 private ["_center","_group"];
-LOG_DEBUG("main/initprocess");
+LOG_DEBUG("core/initprocess");
 
 if (isNil (format["%1",CPORT])) then
 {
