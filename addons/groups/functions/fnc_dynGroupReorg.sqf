@@ -28,7 +28,7 @@ if (isServer) then {
      _leader = leader _group;
      _data   = [nil, FORMAT["%1", [_grpCounter,"default"] call SMIFUNC(getSpellingAlphabetName)], false]; // [<Insignia>, <Group Name>, <Private>]
 
-     ["RegisterGroup", [_group, _leader, _data]] call BIS_fnc_dynamicGroups;
+     ["RegisterGroup", [_group, _leader, _data]] call BISFUNC(dynamicGroups);
   };
   _sideHash = HASH_NEW(_sideHash, 0);
 
