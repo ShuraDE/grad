@@ -13,18 +13,15 @@
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
 
-//Name of Communication Logic
-#define CPORT DOUBLES(ADDON,comm)
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
-//not used Macros about Testtime______________________________________________________________________________________________________
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP(fncName) SMIFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
     #define PREP(fncName) [QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)), QFUNC(fncName)] call SLX_XEH_COMPILE_NEW
 #endif
-//____________________________________________________________________________________________________________________________________
+
 #define GRAD_isHC (!hasInterface && !isDedicated)
 
 // TODO brauchen wir das noch ?
