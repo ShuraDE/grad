@@ -9,6 +9,12 @@ class CfgFunctions
 				file = "\y\grad\addons\groups\functions\fnc_init.sqf";
 			};
 		};
+		class global {
+			class getSpellingAlphabetName {
+				description = "Return Spelling Alphabet Name for index x (like 2 = bravo, 3 = charlie ...)";
+				file = "\y\grad\addons\groups\functions\fnc_getSpellingAlphabetName.sqf";
+			};
+		};
 		class dynamicGroup {
 			class dynGroupReorg {
 				description = "transfer active groups to dynamic groups system";
