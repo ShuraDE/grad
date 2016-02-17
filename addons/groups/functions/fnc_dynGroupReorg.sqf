@@ -1,3 +1,21 @@
+#include "script_component.hpp"
+/* ----------------------------------------------------------------------------
+Function: TAG_fnc_name
+
+Description:
+
+Parameters:
+
+Returns:
+
+Examples:
+    (begin example)
+
+    (end)
+
+Author:
+
+---------------------------------------------------------------------------- */
 private ["_addGroup", "_grpCounter", "_leader", "_data"];
 
 LOG_DEBUG("EXECUTE DYN GRP REPORG");
