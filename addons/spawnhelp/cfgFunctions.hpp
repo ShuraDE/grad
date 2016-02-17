@@ -4,10 +4,7 @@ class CfgFunctions
 	{
 		class spawning
 		{
-      class checkTerrainObj {
-				                      description = "Returns a list of nearest terrain objects.";
-															file = "\y\grad\addons\spawnhelp\functions\fnc_checkTerrainObj.sqf";
-			                      };
+      
 			class checkEntities {
 														description = "Find entities in the sphere with given radius.";
 														file = "\y\grad\addons\spawnhelp\functions\fnc_checkEntities.sqf";
@@ -16,6 +13,10 @@ class CfgFunctions
 				                   description = "Find entities in the sphere with given radius.";
 													 file = "\y\grad\addons\spawnhelp\functions\fnc_checkObjects.sqf";
 												 };
+		 class checkTerrainObj {
+									 				   description = "Returns a list of nearest terrain objects.";
+									 					 file = "\y\grad\addons\spawnhelp\functions\fnc_checkTerrainObj.sqf";
+									 			   };
 			class dataType {
                        description = "Returns the data type of an expression.";
 											 file = "\y\grad\addons\spawnhelp\functions\fnc_dataType.sqf";
