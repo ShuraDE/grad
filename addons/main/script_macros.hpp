@@ -10,6 +10,8 @@
 #define BISFUNC(var1) TRIPLES(BIS,fnc,var1)   //BIS Function
 #define CBAFUNC(var1) TRIPLES(CBA,fnc,var1)   //CBA Function#
 
+#define REMFUNC(var1) TRIPLES('ADDON,fnc,var1') //function name as string
+
 #define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
 #define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
 
@@ -53,7 +55,7 @@
 //remote execute macros
 // TODO check
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
-#define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [str _function, 2]}}
+#define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [REMFUNC(function), 2]}}
 #define RE_AT(params,function, target) params remoteExecCall [str function, target]
 #define RE_AT_JIP(params,function, target) params remoteExecCall [str function, target, true]
-#define RE_SRV_TST(params,function) params remoteExecCall [str function, 2]
+#define RE_SRV_TST(params,function) params remoteExecCall [REMFUNC(function), 2]
