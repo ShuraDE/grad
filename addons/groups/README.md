@@ -21,6 +21,6 @@ Erweiterung von DynamicGroups in Verbindung mit ORBAT als Anzeige der Gruppen.<b
 <br/>
 <br/>
 <br/>
-
+ 
 grob planung "groups"<br/>
 ohne tests, erster entwurf<br/>
