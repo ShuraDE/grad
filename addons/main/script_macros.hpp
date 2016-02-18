@@ -5,16 +5,27 @@
 #define DEFAULT_VERSIONING_LEVEL 2
 
 
-#define SMEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)  //MOD Function (Module Cross)
-#define SMIFUNC(var1) TRIPLES(ADDON,fnc,var1) //MOD Function (Module Intern)
-#define BISFUNC(var1) TRIPLES(BIS,fnc,var1)   //BIS Function
-#define CBAFUNC(var1) TRIPLES(CBA,fnc,var1)   //CBA Function#
+#define FNC_SMC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)  //MOD Function (Module Cross)
+#define FNC_SMI(var1) TRIPLES(ADDON,fnc,var1) //MOD Function (Module Intern)
+#define FNC_BIS(var1) TRIPLES(BIS,fnc,var1)   //BIS Function
+#define FNC_CBA(var1) TRIPLES(CBA,fnc,var1)   //CBA Function#
 
-#define REMFUNC(var1) TRIPLES('ADDON,fnc,var1') //function name as string
-#define REMMCFUNC(var1,var2) TRIPLES('DOUBLES(PREFIX,var1),fnc,var2') //function name as string (Modul Cross)
+#define REM_SMI(var1) TRIPLES('ADDON,fnc,var1') //function name as string
+#define REM_SMC(var1,var2) TRIPLES('DOUBLES(PREFIX,var1),fnc,var2') //function name as string (Modul Cross)
 
-#define SMEVAR(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
-#define SMIVAR(var1) QUOTE(DOUBLES(ADDON,var1))
+#define VAR_SMC(var1,var2) QUOTE(TRIPLES(PREFIX,var1,var2))
+#define VAR_SMI(var1) QUOTE(DOUBLES(ADDON,var1))
+
+//remote execute macros
+// TODO check
+//<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
+#define RE_SMI_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [REM_SMI(function), 2]}}
+#define RE_SMI_AT(params,function,target) params remoteExecCall [REM_SMI(function), target]
+#define RE_SMI_AT_JIP(params,function,target) params remoteExecCall [REM_SMI(function), target, true]
+
+#define RE_SMC_SRV(params,modul,function) { params ["_params","_modul", "_func"] if (!isServer) exitWith {_params remoteExecCall [REM_SMC(modul,function), 2]}}
+#define RE_SMC_AT(params,modul,function,target) params remoteExecCall [REM_SMC(modul,function), target]
+#define RE_SMC_AT_JIP(params,modul,function,target) params remoteExecCall [REM_SMC(modul,function), target, true]
 
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
@@ -45,29 +56,10 @@
 #endif
 
 //hash macros
-#define HASH_NEW(haarray, defValue)         ([haarray, defValue] call CBAFUNC(hashCreate)) //creates a new hash [[]]
-#define HASH_GET(haarray, keyValue)         ([haarray, keyValue] call CBAFUNC(hashGet)) //get value entry from key
-#define HASH_SET(haarray, keyValue, value)  ([haarray, keyValue, value] call CBAFUNC(hashSet)) //set new value with given key, replace if exists
-#define HASH_HAS_KEY(haarray, keyValue)     ([haarray, keyValue] call CBAFUNC(hashHasKey)) //check key exists, return true if exists
-#define HASH_REM(haarray, keyValue)         ([haarray, keyValue] call CBAFUNC(hashRem)) //remove entry from hash table with given key
-#define HASH_FOREACH(haarray, codeValue)    ([haarray, codeValue] call CBAFUNC(hashEachPair)) // execute code each element. using _key and _value
-#define HASH_IS_HASH(object)                (_object call CBAFUNC(isHash)) // return true if is hashtable
-
-//remote execute macros
-// TODO check
-//<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
-#define RE_SRV(params,function) { params ["_params","_func"] if (!isServer) exitWith {_params remoteExecCall [REMFUNC(function), 2]}}
-#define RE_AT(params,function,target) params remoteExecCall [REMFUNC(function), target]
-#define REMC_AT(params,modul,function,target) params remoteExecCall [REMMCFUNC(modul,function), target]
-#define RE_AT_JIP(params,function,target) params remoteExecCall [REMFUNC(function), target, true]
-#define REMC_AT_JIP(params,modul,function,target) params remoteExecCall [REMMCFUNC(modul,function), target, true]
-#define RE_SRV_TST(params,function) params remoteExecCall [REMFUNC(function), 2]
-#define REMC_SRV_TST(params,modul,function) params remoteExecCall [REMMCFUNC(modul,function), 2]
-
-//<params> remoteExec [<function>,(<target>,<isPersistent>)];
-#define SRE_AT(params,function,target) params remoteExec [REMFUNC(function), target]
-#define SREMC_AT(params,modul,function,target) params remoteExec [REMMCFUNC(modul,function), target]
-#define SRE_AT_JIP(params,function,target) params remoteExec [REMFUNC(function), target, true]
-#define SREMC_AT_JIP(params,modul,function,target) params remoteExec [REMMCFUNC(modul,function), target, true]
-#define SRE_SRV_TST(params,function) params remoteExec [REMFUNC(function), 2]
-#define SREMC_SRV_TST(params,modul,function) params remoteExec [REMMCFUNC(modul,function), 2]
+#define HASH_NEW(haarray, defValue)         ([haarray, defValue] call FNC_CBA(hashCreate)) //creates a new hash [[]]
+#define HASH_GET(haarray, keyValue)         ([haarray, keyValue] call FNC_CBA(hashGet)) //get value entry from key
+#define HASH_SET(haarray, keyValue, value)  ([haarray, keyValue, value] call FNC_CBA(hashSet)) //set new value with given key, replace if exists
+#define HASH_HAS_KEY(haarray, keyValue)     ([haarray, keyValue] call FNC_CBA(hashHasKey)) //check key exists, return true if exists
+#define HASH_REM(haarray, keyValue)         ([haarray, keyValue] call FNC_CBA(hashRem)) //remove entry from hash table with given key
+#define HASH_FOREACH(haarray, codeValue)    ([haarray, codeValue] call FNC_CBA(hashEachPair)) // execute code each element. using _key and _value
+#define HASH_IS_HASH(object)                (_object call FNC_CBA(isHash)) // return true if is hashtable
