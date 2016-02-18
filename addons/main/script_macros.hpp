@@ -44,9 +44,7 @@
     #define LOG_DEBUG(message)
 #endif
 
-// TODO test hash macros
 //hash macros
-//([] call EFUNC(common,hashCreate))
 #define HASH_NEW(haarray, defValue)         ([haarray, defValue] call CBAFUNC(hashCreate)) //creates a new hash [[]]
 #define HASH_GET(haarray, keyValue)         ([haarray, keyValue] call CBAFUNC(hashGet)) //get value entry from key
 #define HASH_SET(haarray, keyValue, value)  ([haarray, keyValue, value] call CBAFUNC(hashSet)) //set new value with given key, replace if exists
