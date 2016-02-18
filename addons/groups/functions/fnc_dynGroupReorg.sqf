@@ -26,9 +26,9 @@ if (isServer) then {
   _addGroup = {
       params ["_group","_grpCounter"];
      _leader = leader _group;
-     _data   = [nil, FORMAT["%1", [_grpCounter,"default"] call SMIFUNC(getSpellingAlphabetName)], false]; // [<Insignia>, <Group Name>, <Private>]
+     _data   = [nil, FORMAT["%1", [_grpCounter,"default"] call FNC_SMI(getSpellingAlphabetName)], false]; // [<Insignia>, <Group Name>, <Private>]
 
-     ["RegisterGroup", [_group, _leader, _data]] call BISFUNC(dynamicGroups);
+     ["RegisterGroup", [_group, _leader, _data]] call FNC_BIS(dynamicGroups);
   };
   _sideHash = HASH_NEW(_sideHash, 0);
 

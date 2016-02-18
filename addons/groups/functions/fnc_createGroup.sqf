@@ -34,6 +34,6 @@ _unit synchronizeObjectsAdd [_newORBATModul];
 _newORBATModul setVariable ["Path", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >> ""B_COMM"" >> ""B_S1"""];
 _newORBATModul setVariable ["Parent", "configfile >> ""cfgORBAT"" >> ""B_HQ"" >> ""B_COMM"""];
 
-[_newORBATModul, [_unit]] call BISFUNC(moduleStrategicMapORBAT);
+[_newORBATModul, [_unit]] call FNC_BIS(moduleStrategicMapORBAT);
 
 LOG_INFO("create new orbat module");

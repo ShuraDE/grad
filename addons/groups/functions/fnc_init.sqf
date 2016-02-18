@@ -28,16 +28,16 @@ switch (GVAR(GROUPTYPE)) do {
   case 0: { };
   case 1: //dyn groups
     {
-      if (isServer && !INIT_GROUP_SERVER_DONE) then {
+      if (isServer && !VAR_SMI(INIT_GROUP_SERVER_DONE)) then {
         LOG_DEBUG("INIT DYN GROUP SERVER");
-        ["Initialize", [true]] call BISFUNC(dynamicGroups);
-        INIT_GROUP_SERVER_DONE = true;
+        ["Initialize", [true]] call FNC_BIS(dynamicGroups);
+        VAR_SMI(INIT_GROUP_SERVER_DONE) = true; //server variable
       };
       //KI unsupported ?!?
       if (_unit isKindOf "CAManBase" && (isPlayer _unit || GVAR(GROUPKI)==1)) then {
       //if (isPlayer _unit && local _unit) then {
         LOG_DEBUG(FORMAT["INIT DYN GROUP PLAYER %1", _unit]);
-        ["InitializePlayer", [_unit, true]] call BISFUNC(dynamicGroups);
+        ["InitializePlayer", [_unit, true]] call FNC_BIS(dynamicGroups);
       };
     }; //dyn groups
   case 2: { }; //dyn orbat
