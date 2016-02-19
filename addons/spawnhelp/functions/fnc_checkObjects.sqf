@@ -23,7 +23,7 @@ params ["_pos","_types","_radius","_list"];
 
 If(([_types] call FNC_SMI(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkObjects: NO TYPENAME-ARRAY DETECTED")};
 If(isNil "_list")then{_list = false;};
-_output = [];
+_output = 0;
 _found = nearestObjects [_pos,_types,_radius];
 If(count _found > 0)then
 {
