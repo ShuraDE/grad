@@ -22,7 +22,7 @@ private ["_output","_inhousepos","_level_count","_x","_last_levelno","_add_arr",
 params ["_house","_idx"];
 
 If(isNil "_idx")then{_idx = "COUNT";};
-_output = [];
+_output = 0;
 
 _inhousepos = [_house] call FNC_BIS(buildingPositions);
 If(count _inhousepos > 0)then
@@ -33,6 +33,7 @@ If(count _inhousepos > 0)then
     case "ALL":{_output = _inhousepos;};
     case "LEVELS":{
                     _level_count = [];
+                    _output = [];
                     {_level_count pushBack (ceil(_x select 2));}forEach _inhousepos;
                     _level_count arrayIntersect _level_count;
                     _level_count sort true;
