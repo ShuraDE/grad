@@ -7,10 +7,10 @@ Description: Get all available positions within a building or structure.
 
 Parameters: [_building,(Optional:"ALL"/"LEVELS")]
 
-Returns:  - Number of progressSetPosition
+Returns:  - Number of House Positions
           Optional:
           - "ALL": Array with all Positions
-          - "LEVELS": Array with LEVELArrays
+          - "LEVELS": Array with Arrays of Levelpositions
 
 Examples:
           _pos_list = [_building] call GRAD_spawnhelp_fnc_checkHousePos;
