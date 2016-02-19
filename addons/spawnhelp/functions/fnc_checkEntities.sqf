@@ -22,7 +22,7 @@ private ["_output","_found"];
 params ["_posobj","_types","_radius","_list"];
 
 If(isNil "_list")then{_list = false;};
-_output = [];
+_output = 0;
 _found = _posobj nearEntities [_types,_radius];
 If(count _found > 0)then
 {
