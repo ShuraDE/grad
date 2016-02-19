@@ -23,7 +23,7 @@ params ["_position","_radius"];
 _street_block = "";
 _old_distance = _radius;
 _distance = 0;
-_street_arr = [_position,_radius,true] call SMIFUNC(getStreets);	
+_street_arr = [_position,_radius,true] call FNC_SMI(getStreets);	
 If(count _street_arr > 0)then
 {
  {
