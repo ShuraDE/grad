@@ -29,7 +29,7 @@ switch(typeName _center)do
   case "ARRAY":{If(count _center > 2 && (typeName (_center select 0) == "SCALAR") && (typeName (_center select 1) == "SCALAR"))then
                 {_arr = nearestTerrainObjects [[(_center select 0),(_center select 1),0], _types, _radius];};
                };
-  default{};
+  default{LOG_ERR("GRAD_spawnhelp_fnc_checkTerrainObj: NO OBJECT OR POSITION")};
 };
 If(count _arr > 0)then
 {
