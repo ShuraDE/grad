@@ -16,20 +16,18 @@ Examples:
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
-private ["_xp","_yp","_output","_arr"];
+private ["_output","_arr"];
 params ["_center","_types","_radius","_list"];
 
 If(([_types] call FNC_SMI(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkTerrainObj: NO TYPENAME-ARRAY DETECTED")};
 If(isNil "_list")then{_list = false;};
 _output = [];
 _arr = [];
-_xp = 0;
-_yp = 0;
 switch(typeName _center)do
 {
   case "OBJECT":{_arr = nearestTerrainObjects [_center, _types, _radius];};
   case "ARRAY":{If(count _center > 2 && (typeName (_center select 0) == "SCALAR") && (typeName (_center select 1) == "SCALAR"))then
-                { _xp = (_center select 0); _yp = (_center select 1); _arr = nearestTerrainObjects [[_xp,_yp,0], _types, _radius];};
+                {_arr = nearestTerrainObjects [[(_center select 0),(_center select 1),0], _types, _radius];};
                };
   default{};
 };
