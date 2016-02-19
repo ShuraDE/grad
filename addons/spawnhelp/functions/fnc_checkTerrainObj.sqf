@@ -19,7 +19,7 @@ Author: Fry
 private ["_xp","_yp","_output","_arr"];
 params ["_center","_types","_radius","_list"];
 
-If(([_types] call SMIFUNC(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkTerrainObj: NO TYPENAME-ARRAY DETECTED")};
+If(([_types] call FNC_SMI(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkTerrainObj: NO TYPENAME-ARRAY DETECTED")};
 If(isNil "_list")then{_list = false;};
 _output = [];
 _arr = [];
