@@ -5,7 +5,7 @@ Function: GRAD_spawnhelp_fnc_checkObjects
 
 Description: Find Objects with given radius.
 
-Parameters: [position,Array of Strings,Radius,(optional: true - List Objects)]
+Parameters: [position/Object,Array of Strings,Radius,(optional: true - List Objects)]
 
            Array of Strings(TYPENAME-ARRAY) - ["Man","Truck"]
 
@@ -18,13 +18,18 @@ Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
 
-private ["_output","_found"];
+private ["_position","_output","_found"];
 params ["_pos","_types","_radius","_list"];
 
-If(([_types] call FNC_SMI(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkObjects: NO TYPENAME-ARRAY DETECTED")};
 If(isNil "_list")then{_list = false;};
 _output = 0;
-_found = nearestObjects [_pos,_types,_radius];
+switch(typeName _pos)do
+{
+  case "OBJECT":{_position = position _pos;};
+  case "ARRAY":{_positon = _pos;};
+  default {LOG_ERR("GRAD_spawnhelp_fnc_checkObjects: NO OBJECT OR POSITION")};
+}
+_found = nearestObjects [_position,_types,_radius];
 If(count _found > 0)then
 {
   If(_list)then{_output = _found}else{_output = (count _found);}
