@@ -1,16 +1,30 @@
 #include "script_component.hpp"
+/* -----------------------------------------------------------------------------------------------
+Function: GRAD_spawnhelp_fnc_getSlope
 
+Description: Returns an average slope value of terrain within passed radius.
+
+Parameters: [position]
+
+Returns: BOOL
+
+Examples:
+          _streets_arr  = [_position] call GRAD_spawnhelp_fnc_getSlope;
+
+Author: Fry
+
+-------------------------------------------------------------------------------------------------- */
 // Returns an average slope value of terrain within passed radius.
 // a little bit modified. no need to create a "global" logic, local is enough, etc
 // parameters: position, radius
 // example: _slope = [the_position, the_radius] call grad_spawnhelp_fnc_getSlope;
 
 
-	private ["_output","_radius", "_slopeObject", "_centerHeight", "_height", "_direction", "_count"];
-  params ["_position"];
+	private ["_output","_slopeObject", "_centerHeight", "_height", "_direction", "_count"];
+  params ["_position","_radius"];
 
+  If(isNil "_radius")then{_radius = 5;};
   _output = false;
-  _radius = 5;
 	_slopeObject = "Logic" createVehicleLocal _position;
 	_slopeObject setPos _position;
 	_centerHeight = getPosASL _slopeObject select 2;
