@@ -14,11 +14,6 @@ Examples:
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
-// Returns an average slope value of terrain within passed radius.
-// a little bit modified. no need to create a "global" logic, local is enough, etc
-// parameters: position, radius
-// example: _slope = [the_position, the_radius] call grad_spawnhelp_fnc_getSlope;
-
 
 	private ["_output","_slopeObject", "_centerHeight", "_height", "_direction", "_count"];
   params ["_position","_radius"];
