@@ -4,11 +4,19 @@ class CfgFunctions
 	{
 		class spawning
 		{
-      
+
 			class checkEntities {
 														description = "Find entities in the sphere with given radius.";
 														file = "\y\grad\addons\spawnhelp\functions\fnc_checkEntities.sqf";
 													};
+			class checkHousePos {
+ 														description = "Find all available positions in a building or structure.";
+														file = "\y\grad\addons\spawnhelp\functions\fnc_checkHousePos.sqf";
+			                    };
+			class checkHouses {
+				                   description = "Find Houses with given radius.";
+													 file = "\y\grad\addons\spawnhelp\functions\fnc_checkHouses.sqf";
+									 			};
 			class checkObjects {
 				                   description = "Find entities in the sphere with given radius.";
 													 file = "\y\grad\addons\spawnhelp\functions\fnc_checkObjects.sqf";
