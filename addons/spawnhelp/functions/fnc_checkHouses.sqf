@@ -7,7 +7,7 @@ Description: Find Houses with given radius.
 
 Parameters: [position/Object,Radius,check positions,(optional: true - List Objects)]
 
-
+            -check positions (BOOL): Find Houses with available Housepositions
 
 Returns: Array with Objects / Number
 
