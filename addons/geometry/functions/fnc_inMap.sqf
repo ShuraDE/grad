@@ -3,7 +3,7 @@
 /* -----------------------------------------------------------------------------------------------
 Function: GRAD_geometry_fnc_inMap
 
-Description: Check Position is inside of Map
+Description: Check the Position that is inside of Map.
 
 Parameters: [position]
 
