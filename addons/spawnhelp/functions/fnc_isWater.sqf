@@ -1,5 +1,19 @@
 #include "script_component.hpp"
+/* -----------------------------------------------------------------------------------------------
+Function: GRAD_spawnhelp_fnc_isWater
 
+Description: Returns whether water is at given position.
+
+Parameters: [position]
+
+Returns: BOOL
+
+Examples:
+          _iswater = [_position] call GRAD_spawnhelp_fnc_isWater;
+
+Author: Fry
+
+-------------------------------------------------------------------------------------------------- */
 //[position] call grad_spawnhelp_fnc_isWater;
 // BOOL
 
