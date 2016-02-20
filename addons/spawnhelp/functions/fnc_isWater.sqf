@@ -14,8 +14,6 @@ Examples:
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
-//[position] call grad_spawnhelp_fnc_isWater;
-// BOOL
 
 private ["_x_k","_y_k","_is_water"];
 params ["_pos"];
