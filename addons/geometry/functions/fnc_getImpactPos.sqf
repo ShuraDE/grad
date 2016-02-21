@@ -2,7 +2,7 @@
 /* -----------------------------------------------------------------------------------------------
 Function: GRAD_geometry_fnc_getImpactPoint
 
-Description: Find a random Position for Artillery
+Description: Find a random Impact Position for Artillery
 
 Parameters: [Position/Object,Radius,Number of positions]
 
