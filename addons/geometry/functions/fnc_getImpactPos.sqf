@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /* -----------------------------------------------------------------------------------------------
-Function: GRAD_geometry_fnc_getImpactPoint
+Function: GRAD_geometry_fnc_getImpactPos
 
 Description: Find a random Impact Position for Artillery
 
@@ -9,7 +9,7 @@ Parameters: [Position/Object,Radius,Number of positions]
 
 Returns:  Array with Positions
 Examples:
-          _pos_list = [TANK,50,10] call GRAD_geometry_fnc_getImpactPoint;
+          _pos_list = [TANK,50,10] call GRAD_geometry_fnc_getImpactPos;
 
 Author: Fry
 
