@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 /* -----------------------------------------------------------------------------------------------
-Function: GRAD_geometry_fnc_isOnMap
+Function: GRAD_spawnhelp_fnc_isOnMap
 
 Description: Check the Position that is inside of Map.
 
@@ -10,7 +10,7 @@ Parameters: [position]
 Returns: BOOL
 
 Examples:
-          _bool = [_position] call GRAD_geometry_fnc_isOnMap;
+          _bool = [_position] call GRAD_spawnhelp_fnc_isOnMap;
 
 Author: Fry
 Inspired from Nomisum
