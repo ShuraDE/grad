@@ -33,6 +33,10 @@ class CfgFunctions
 							 				 description = "Returns an average slope value of terrain within passed radius.";
 							 				 file = "\y\grad\addons\spawnhelp\functions\fnc_getSlope.sqf";
 							 			 };
+			class getStreetDir {
+														description = "Check the Direction of given Streetblock.";
+														file = "\y\grad\addons\spawnhelp\functions\fnc_getStreetDir.sqf";
+												 };
       class getStreets {
                         description = "Checks for Streets in a spezific Range.";
 				                file = "\y\grad\addons\spawnhelp\functions\fnc_getStreets.sqf";
