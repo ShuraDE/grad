@@ -9,21 +9,22 @@ Parameters: [Position,Radius,(Optional:Radius for big Objects)]
 
             Optional: Radius to find Places for big Objects without Houses,Walls,Vehicles and StaticWeapons
 
-Returns:  Position
+Returns:  [Position,Direction(given Position -> BorderPos)]
 Examples:
           _borderpos = [(getMarkerPos "Town"),200] call GRAD_geometry_fnc_getCircleBorderPos;
 
 Author: Fry
 
 ------------------------------------------------------------------------------------------------------------- */
-private ["_output","_co","_angle","_mran","_point","_onmap","_statics","_slope"];
+private ["_output","_found_pos","_co","_angle","_mran","_point","_dir","_onmap","_statics","_slope"];
 params ["_position","_radius","_big_radius"];
-If(isNil "_big_radius")then{_big_radius = 5;}
+If(isNil "_big_radius")then{_big_radius = 5;};
 _output = [];
+_found_pos = [];
 _co = 0;
 _angle = 0;
 
-while{count _output == 0 && _co < 100}do
+while{count _found_pos == 0 && _co < 100}do
 {
  for "_mran" from 1 to (round(random 10))do
  {
@@ -37,7 +38,8 @@ while{count _output == 0 && _co < 100}do
    _slope = [_point] call FNC_SMC(spawnhelp,getSlope);
    If(!(surfaceIsWater _point) && _onmap && _slope && _statics < 1)then
    {
-     _output = _point;
+     _dir = [_position,_point] call FNC_BIS(dirTo);
+     _output = [_point,_dir];
    }else{_co = _co + 1;};
  };
  sleep 0.02
