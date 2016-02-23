@@ -33,7 +33,7 @@ while{count _output == 0 && _co < 100}do
    If(!(surfaceIsWater _point) && _onmap && _slope && _statics < 1)then
    {
      _output = _point;
-   }else{_co = _co + 1;}
+   }else{_co = _co + 1;};
  };
  sleep 0.02
 };
