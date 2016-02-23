@@ -18,7 +18,7 @@ Author: Fry
 ------------------------------------------------------------------------------------------------------------- */
 private ["_output","_co","_angle","_point","_onmap","_statics","_slope"];
 params ["_position","_radius","_big_radius"];
-If(isNil "_big_radius")then{_big_radius = 5;}
+If(isNil "_big_radius")then{_big_radius = 5;};
 _output = [];
 _co = 0;
 while{count _output == 0 && _co < 100}do
