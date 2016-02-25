@@ -30,6 +30,7 @@ switch(_idx)do
 	case 0:{_type = "Sign_Arrow_F";};
 	case 1:{_type = "Sign_Arrow_Blue_F";};
 	case 2:{_type = "Sign_Arrow_Green_F";};
+	default{If(true)exitWith {LOG_WARN("GRAD_spawnhelp_fnc_setDebugMarker: NO AVAILABLE CLASSNAME DETECTED!")};};
 };
 
 If(_chk_posses)then

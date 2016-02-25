@@ -5,26 +5,31 @@ Function: GRAD_spawnhelp_fnc_checkObjects
 
 Description: Find Objects with given radius.
 
-Parameters: [position,Array of Strings,Radius,(optional: true - List Objects)]
+Parameters: [position/Object,Array of Strings,Radius,(optional: true - List Objects)]
 
            Array of Strings(TYPENAME-ARRAY) - ["Man","Truck"]
 
 Returns: Array with Objects / Number
 
 Examples:
-          _arrow = [_position,["Static","house","Tank","Car","StaticWeapon"],200] call GRAD_spawnhelp_fnc_checkObjects;
+          _number = [_position,["Static","house","Tank","Car","StaticWeapon"],200] call GRAD_spawnhelp_fnc_checkObjects;
 
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
 
-private ["_output","_found"];
+private ["_position","_output","_found"];
 params ["_pos","_types","_radius","_list"];
 
-If(([_types] call SMIFUNC(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkObjects: NO TYPENAME-ARRAY DETECTED")};
 If(isNil "_list")then{_list = false;};
-_output = [];
-_found = nearestObjects [_pos,_types,_radius];
+_output = 0;
+switch(typeName _pos)do
+{
+  case "OBJECT":{_position = position _pos;};
+  case "ARRAY":{_positon = _pos;};
+  default {LOG_ERR("GRAD_spawnhelp_fnc_checkObjects: NO OBJECT OR POSITION")};
+}
+_found = nearestObjects [_position,_types,_radius];
 If(count _found > 0)then
 {
   If(_list)then{_output = _found}else{_output = (count _found);}
