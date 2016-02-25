@@ -4,4 +4,4 @@ LOG_DEBUG("xeh init groups");
 
 LOG_DEBUG(_unit);
 
-[_unit] call SMIFUNC(init);
+[_unit] call FNC_SMI(init);
