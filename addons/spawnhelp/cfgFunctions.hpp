@@ -43,7 +43,7 @@ class CfgFunctions
 			                 };
 			class isOnMap {
 				               description = "Check Position is inside of Map.";
-				               file = "\y\grad\addons\spawnhelp\functions\fnc_inMap.sqf";
+				               file = "\y\grad\addons\spawnhelp\functions\fnc_isOnMap.sqf";
 			              };
       class isWater {
                       	description = "Returns whether water is at given position.";
