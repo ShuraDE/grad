@@ -21,7 +21,7 @@ class CfgFunctions
 														file = "\y\grad\addons\geometry\functions\fnc_getNumPosLine.sqf";
 													};
 		  class getSafePos {
-				                 description = "Find a Safe Possition in Circle or Circle Border..";
+				                 description = "Find a Safe Possition in Circle or Circle Border.";
 												 file = "\y\grad\addons\geometry\functions\fnc_getSafePos.sqf";
 			                 };
 		};
