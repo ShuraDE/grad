@@ -2,7 +2,7 @@
 /* ---------------------------------------------------------------------------------------------------------
 Function: GRAD_geometry_fnc_getSafePos
 
-Description: Find a Safe Possition in Circle or Circles Border. With Slope Check
+Description: Find a Safe Possition in Circle or Circle Border. With Slope Check
 
 
 Parameters: [Position,Radius,Toleranz,(Optional:Border),(Optional:Degrees)]
