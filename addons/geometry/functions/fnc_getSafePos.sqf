@@ -13,7 +13,8 @@ Parameters: [Position,Radius,Toleranz,(Optional:Border),(Optional:Degrees)]
 
 Returns:  Position
 Examples:
-          _pos = [(getMarkerPos "Town"),200] call GRAD_geometry_fnc_getSafePos;
+          _safePosArea = [(getMarkerPos "Town"),200,20] call GRAD_geometry_fnc_getSafePos;
+          _safePosRandomBorder = [(getMarkerPos "Town"),200,20,true,-1] call GRAD_geometry_fnc_getSafePos;
 
 Author: Fry
 
