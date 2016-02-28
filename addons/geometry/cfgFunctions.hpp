@@ -20,6 +20,10 @@ class CfgFunctions
 														description = "Finds X positions on a line around a position with given vector.";
 														file = "\y\grad\addons\geometry\functions\fnc_getNumPosLine.sqf";
 													};
+		  class getSafePos {
+				                 description = "Find a Safe Possition in Circle or Circle Border..";
+												 file = "\y\grad\addons\geometry\functions\fnc_getSafePos.sqf";
+			                 };
 		};
 	};
 };
