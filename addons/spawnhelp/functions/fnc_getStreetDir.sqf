@@ -39,7 +39,7 @@ switch(_idx)do
               _is_ok = true;
               _check_arr = [];
               {
-                _chk_dir = [(position _streetblockname) getDir (position _x);
+                _chk_dir = (position _streetblockname) getDir (position _x);
                 _chk_angle = [(position _streetblockname),_chk_dir,180,_optpos] call FNC_BIS(inAngleSector);
                 If(_chk_angle && _is_ok)then
                 {_check_arr = [_chk_dir]; _is_ok = false;};
