@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-
 /* -----------------------------------------------------------------------------------------------
 Function: GRAD_spawnhelp_fnc_checkHousePos
 
@@ -25,6 +24,7 @@ If(isNil "_idx")then{_idx = "COUNT";};
 _output = 0;
 
 _inhousepos = [_house] call FNC_BIS(buildingPositions);
+
 If(count _inhousepos > 0)then
 {
   switch(toUpper _idx)do
@@ -34,8 +34,7 @@ If(count _inhousepos > 0)then
     case "LEVELS":{
                     _level_count = [];
                     _output = [];
-                    {_level_count pushBack (ceil(_x select 2));}forEach _inhousepos;
-                    _level_count arrayIntersect _level_count;
+                   {_level_count pushBackUnique (ceil(_x select 2));}forEach _inhousepos;
                     _level_count sort true;
                     _last_levelno = -1;
                     {
@@ -50,7 +49,7 @@ If(count _inhousepos > 0)then
                         };
                       };
                       _last_levelno = _x;
-                      _output pushBack _add_arr;
+                      If(count _add_arr > 0)then{_output pushBack _add_arr;};
                     }forEach _level_count;
                   };
     default {LOG_ERR("GRAD_spawnhelp_fnc_checkHousePos: NO OPTIONAL INDEX FOUND")};
