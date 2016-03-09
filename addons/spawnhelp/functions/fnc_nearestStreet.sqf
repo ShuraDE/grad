@@ -27,7 +27,7 @@ _street_arr = [_position,_radius,true] call FNC_SMI(getStreets);
 If(count _street_arr > 0)then
 {
  {
-	 _distance = (getPos _x) distance _found_pos;
+	 _distance = (getPos _x) distance _position;
 	 If(_distance < _old_distance)then
 	 {
 		 _old_distance = _distance;
