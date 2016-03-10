@@ -23,15 +23,16 @@ params ["_pos","_types","_radius","_list"];
 
 If(isNil "_list")then{_list = false;};
 _output = 0;
+_position = [];
 switch(typeName _pos)do
 {
   case "OBJECT":{_position = position _pos;};
-  case "ARRAY":{_positon = _pos;};
+  case "ARRAY":{_position = _pos;};
   default {LOG_ERR("GRAD_spawnhelp_fnc_checkObjects: NO OBJECT OR POSITION")};
-}
+};
 _found = nearestObjects [_position,_types,_radius];
 If(count _found > 0)then
 {
-  If(_list)then{_output = _found}else{_output = (count _found);}
+  If(_list)then{_output = _found}else{_output = (count _found);};
 };
 _output
