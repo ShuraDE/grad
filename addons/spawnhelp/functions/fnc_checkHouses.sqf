@@ -18,11 +18,12 @@ Examples:
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
-private ["_output","_position","_good_houses"];
+private ["_output","_position","_house_arr","_house_list","_good_houses"];
 params ["_posobj","_radius","_check_pos","_list"];
 
 If(isNil "_list")then{_list = false;};
 _output = 0;
+_house_arr = [];
 _position = [];
 switch(typeName _posobj)do
 {
@@ -31,8 +32,11 @@ switch(typeName _posobj)do
   default {LOG_ERR("GRAD_spawnhelp_fnc_checkHouses: NO OBJECT OR POSITION")};
 };
 
-_house_arr = [_position,["House"],_radius,true] call FNC_SMI(checkTerrainObj);
-
+_house_list = [_position,["House"],_radius,true] call FNC_SMI(checkTerrainObj);
+If(count _house_list > 0)then
+{
+  {If((typeOf _x) != "")then{_house_arr pushBack _x;};}forEach _house_list;
+};
 If(count _house_arr > 0)then
 {
    _good_houses = [];
