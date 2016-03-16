@@ -29,7 +29,7 @@ switch(typeName _posobj)do
 {
   case "OBJECT":{_position = position _posobj;};
   case "ARRAY":{_position = _posobj;};
-  default {LOG_ERR("GRAD_spawnhelp_fnc_checkHouses: NO OBJECT OR POSITION")};
+  default {If(true) exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkHouses: NO OBJECT OR POSITION")};};
 };
 
 _house_list = [_position,["House"],_radius,true] call FNC_SMI(checkTerrainObj);
