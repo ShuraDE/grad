@@ -50,7 +50,7 @@ If(count _house_arr > 0)then
  }forEach _house_arr;
  If(count _good_houses > 0)then
  {
-   If(_list)then{_output = _good_houses;}else{_ouput = (count _good_houses);};
+   If(_list)then{_output = _good_houses;}else{_output = (count _good_houses);};
  };
 };
 _output
