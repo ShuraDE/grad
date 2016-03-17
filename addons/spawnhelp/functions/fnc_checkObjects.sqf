@@ -23,6 +23,7 @@ params ["_pos","_types","_radius","_list"];
 
 If(isNil "_list")then{_list = false;};
 _output = If(_list)then{[]}else{0};
+_position = [];
 switch(typeName _pos)do
 {
   case "OBJECT":{_position = position _pos;};
