@@ -22,7 +22,7 @@ private ["_position","_output","_found"];
 params ["_pos","_types","_radius","_list"];
 
 If(isNil "_list")then{_list = false;};
-_output = 0;
+_output = If(_list)then{[]}else{0};
 switch(typeName _pos)do
 {
   case "OBJECT":{_position = position _pos;};
