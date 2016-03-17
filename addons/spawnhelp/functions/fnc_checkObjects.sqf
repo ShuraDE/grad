@@ -22,7 +22,11 @@ private ["_position","_output","_found"];
 params ["_pos","_types","_radius","_list"];
 
 If(isNil "_list")then{_list = false;};
+<<<<<<< HEAD
 _output = 0;
+=======
+_output = If(_list)then{[]}else{0};
+>>>>>>> geometry
 _position = [];
 switch(typeName _pos)do
 {

@@ -21,7 +21,7 @@ params ["_center","_types","_radius","_list"];
 
 If(([_types] call FNC_SMI(dataType)) != "ARRAY") exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkTerrainObj: NO TYPENAME-ARRAY DETECTED")};
 If(isNil "_list")then{_list = false;};
-_output = 0;
+_output = If(_list)then{[]}else{0};
 _arr = [];
 switch(typeName _center)do
 {
