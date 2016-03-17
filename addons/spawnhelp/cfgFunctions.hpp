@@ -29,6 +29,10 @@ class CfgFunctions
                        description = "Returns the data type of an expression.";
 											 file = "\y\grad\addons\spawnhelp\functions\fnc_dataType.sqf";
 										 };
+			class getMapLocations {
+															description = "Returns the Locations of Map.";
+															file = "\y\grad\addons\spawnhelp\functions\fnc_getMapLocations.sqf";
+														};
 			class getSlope {
 							 				 description = "Returns an average slope value of terrain within passed radius.";
 							 				 file = "\y\grad\addons\spawnhelp\functions\fnc_getSlope.sqf";
