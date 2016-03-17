@@ -68,15 +68,10 @@ If(count _location_arr > 0)then
                                 If(_dist >= _min_radius && _dist <= _max_radius)then
                                 {
                                   _output pushBack [_name,_pos,_size];
-                                  //entfernen
-                                  [_text,"H",_pos,[_size,_size],"Color1_FD_F","Empty","SolidBorder",_angle,_text] call GRAD_fnc_showit;
                                 };
                              };
         case (!_chk_settings):{
                                   _output pushBack [_name,_pos,_size];
-
-                                  //entfernen
-                                  [_text,"H",_pos,[_size,_size],"Color1_FD_F","Empty","SolidBorder",_angle,_text] call GRAD_fnc_showit;
                               };
       };
     };
