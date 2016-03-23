@@ -7,7 +7,7 @@ Description: Return Number of Streetblocks in Line to specific Position or Direc
 Parameters: [Position,Direction/Position,Number of Streetblocks]
 
 
-Returns:  [Position,Direction]
+Returns:  [[Position,Direction]]
 Examples:
           _streetblocks = [(getMarkerPos "ConvoyStart"),240,7] call GRAD_spawnhelp_fnc_getStreetLine;
 
