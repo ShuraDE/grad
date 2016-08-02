@@ -34,12 +34,14 @@ switch (GVAR(GROUPTYPE)) do {
         VAR_SMI(INIT_GROUP_SERVER_DONE) = true; //server variable
       };
       //KI unsupported ?!?
-      if (_unit isKindOf "CAManBase" && (isPlayer _unit || GVAR(GROUPKI)==1)) then {
-      //if (isPlayer _unit && local _unit) then {
+      if (isPlayer _unit && local _unit) then {
+
+      //if (_unit isKindOf "CAManBase" && (isPlayer _unit || GVAR(GROUPKI)==1)) then {
         LOG_DEBUG(FORMAT["INIT DYN GROUP PLAYER %1", _unit]);
         ["InitializePlayer", [_unit, true]] call FNC_BIS(dynamicGroups);
       };
     }; //dyn groups
   case 2: { }; //dyn orbat
+  default { LOG_DEBUG("UNKNOWN GROUP TYPE") };
 
 };

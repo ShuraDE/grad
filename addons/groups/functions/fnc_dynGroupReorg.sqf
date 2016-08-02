@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /* ----------------------------------------------------------------------------
-Function: TAG_fnc_name
+Function: grad_fnc_dynGroupReorg
 
 Description:
 

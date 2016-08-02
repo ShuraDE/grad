@@ -16,7 +16,7 @@ Examples:
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
-rivate ["_streets_arr", "_streets_counter"];
+private ["_streets_arr", "_streets_counter"];
 params ["_detect_street_point","_detect_street_dist","_list_streets"];
 
 
