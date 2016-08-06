@@ -22,8 +22,11 @@ params ["_detect_street_point","_detect_street_dist","_list_streets"];
 
 if(isNil "_list_streets") then {_list_streets = false};
 _streets_arr = [];
-_streets_counter = 0;
+_streets_counter = If(_list_streets)then{[]}else{0};
 
 _streets_arr = _detect_street_point nearRoads _detect_street_dist;
-if(_list_streets) then {if(count _streets_arr > 0)then{_streets_counter = _streets_arr;}else{_streets_counter = [];};}else{_streets_counter = count _streets_arr;};
+If(count _streets_arr > 0)then
+{
+  if(_list_streets)then{_streets_counter = _streets_arr;}else{_streets_counter = count _streets_arr;};
+};
 _streets_counter

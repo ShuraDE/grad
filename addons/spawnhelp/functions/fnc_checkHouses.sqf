@@ -18,21 +18,25 @@ Examples:
 Author: Fry
 
 -------------------------------------------------------------------------------------------------- */
-private ["_output","_position","_good_houses"];
+private ["_output","_position","_house_arr","_house_list","_good_houses"];
 params ["_posobj","_radius","_check_pos","_list"];
 
 If(isNil "_list")then{_list = false;};
-_output = 0;
+_output = If(_list)then{[]}else{0};
+_house_arr = [];
 _position = [];
 switch(typeName _posobj)do
 {
   case "OBJECT":{_position = position _posobj;};
   case "ARRAY":{_position = _posobj;};
-  default {LOG_ERR("GRAD_spawnhelp_fnc_checkHouses: NO OBJECT OR POSITION")};
+  default {If(true) exitWith {LOG_ERR("GRAD_spawnhelp_fnc_checkHouses: NO OBJECT OR POSITION")};};
 };
 
-_house_arr = [_position,["House"],_radius,true] call FNC_SMI(checkTerrainObj);
-
+_house_list = [_position,["House"],_radius,true] call FNC_SMI(checkTerrainObj);
+If(count _house_list > 0)then
+{
+  {If((typeOf _x) != "")then{_house_arr pushBack _x;};}forEach _house_list;
+};
 If(count _house_arr > 0)then
 {
    _good_houses = [];
@@ -46,7 +50,7 @@ If(count _house_arr > 0)then
  }forEach _house_arr;
  If(count _good_houses > 0)then
  {
-   If(_list)then{_output = _good_houses;}else{_ouput = (count _good_houses);};
+   If(_list)then{_output = _good_houses;}else{_output = (count _good_houses);};
  };
 };
 _output

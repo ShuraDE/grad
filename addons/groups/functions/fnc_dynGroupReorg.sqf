@@ -1,19 +1,19 @@
 #include "script_component.hpp"
 /* ----------------------------------------------------------------------------
-Function: TAG_fnc_name
+Function: grad_fnc_dynGroupReorg
 
-Description:
+Description: Creates (AI) Groups from mission based groups in dynamic groups
 
-Parameters:
+Parameters: none
 
-Returns:
+Returns: none
 
 Examples:
     (begin example)
 
     (end)
 
-Author:
+Author: 
 
 ---------------------------------------------------------------------------- */
 private ["_addGroup", "_leader", "_data", "_sideHash"];
