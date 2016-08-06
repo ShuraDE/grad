@@ -1,6 +1,6 @@
 {
   "exclude": [
-    "^(node_modules|bower_components|\\.imdone|target|build|dist|logs)[\\/\\\\]?|\\.(git|svn|hg|npmignore)|\\~$|\\.(jpg|png|gif|swp|ttf|otf)$"
+    "nothing_to_exclude"
   ],
   "watcher": true,
   "keepEmptyPriority": false,
@@ -22,16 +22,24 @@
   },
   "lists": [
     {
-      "name": "Done",
+      "name": "TODO",
       "hidden": false
     },
     {
-      "name": "Ideen",
+      "name": "WIP",
       "hidden": false
     },
     {
       "name": "Backlog",
       "hidden": false
+    },
+    {
+      "name": "Done",
+      "hidden": false
+    },
+    {
+      "name": "Ideen",
+      "hidden": true
     }
   ],
   "marked": {

@@ -18,6 +18,10 @@ Author:
 ---------------------------------------------------------------------------- */
 LOG_INFO("test create orbat module");
 
+
+// #TODO: überdenken
+// #Backlog:0 ORBAT Generation
+
 //testing
 private ["_newORBATModul","_side_logic","_group_logic"];
 params ["_unit"];

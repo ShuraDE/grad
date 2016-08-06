@@ -19,7 +19,7 @@
 #define VAR_SMI(var1) DOUBLES(ADDON,var1)
 
 //remote execute macros
-// TODO check
+// TODO:10 check
 //<params> remoteExecCall [<function>,(<target>,<isPersistent>)];
 
 #define RE_SMI_SRV(_params, _func) { params ["_params","_func"]; if (!isServer) exitWith {_params remoteExecCall [REM_SMI(_func), 2]}}
@@ -42,7 +42,7 @@
 
 #define GRAD_isHC (!hasInterface && !isDedicated)
 
-// TODO brauchen wir das noch ?
+// #TODO:20 brauchen wir das noch ?
 #define GA_fnc_LOG { params ["_file","_lineNum","_addon","_message"]; diag_log [_addon,diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message];}
 
 #define LOG_FORMAT(module,level,file,lnr, message) FORMAT_4(QUOTE([GRAD] %1 (module) %3|%4: %2),level, message, file, lnr)

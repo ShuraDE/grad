@@ -2,11 +2,12 @@
 /* ----------------------------------------------------------------------------
 Function: TAG_fnc_name
 
-Description:
+Description: Initialize Groupmanagment by setting grad_groups_GROUPTYPE [0|1|2]
+  none, dynamic groups, orbat based group system
 
-Parameters:
+Parameters: none
 
-Returns:
+Returns: none
 
 Examples:
     (begin example)
@@ -19,7 +20,7 @@ Author:
 params ["_unit"];
 LOG_DEBUG("INIT GROUPS ADDON");
 
-// TODO add to settings, atm nailed (testing)
+// #TODO:0 setting hardcoded add to settings, atm nailed (testing)
 GVAR(GROUPTYPE) = 1;
 GVAR(GROUPKI) = 1;
 
