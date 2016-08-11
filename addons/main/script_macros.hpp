@@ -34,10 +34,15 @@
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
 
 
+#define FUNCE(var1) TRIPLES(ADDON,fn,var1)
+#define QFUNCE(var1) QUOTE(FUNCE(var1))
+
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP(fncName) FNC_SMI(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+    #define PREPE(folder,fncName) FNC_SMI(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\folder\DOUBLES(fn,fncName).sqf))
 #else
     #define PREP(fncName) [QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)), QFUNC(fncName)] call SLX_XEH_COMPILE_NEW
+    #define PREPE(folder,fncName) [QUOTE(PATHTOF(functions\folder\DOUBLES(fn,fncName).sqf)), QFUNCE(fncName)] call SLX_XEH_COMPILE_NEW
 #endif
 
 #define GRAD_isHC (!hasInterface && !isDedicated)
