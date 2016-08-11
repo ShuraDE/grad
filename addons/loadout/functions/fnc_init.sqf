@@ -1,18 +1,28 @@
 #include "\y\grad\addons\loadout\script_component.hpp"
+params ["_unit"];
 
-private ["_unit"];
+LOG_DEBUG("INIT loadout ADDON");
+LOG_DEBUG(QUOTE(FNC_SMI(scheduleLoadout)));
+LOG_DEBUG(QUOTE(FNC_SMI(doLoadout)));
+LOG_DEBUG(QUOTE(FNC_SMI(applyLoadout)));
+
 //check TFAR is loaded and player controlled unit
-if (!isClass (configFile >> "CfgPatches" >> "task_force_radio_items") && hasInterface && local _unit && !isNull((player)) then {
+if ((!isNull _unit) && isClass (configFile >> "CfgPatches" >> "task_force_radio_items") &&  isPlayer _unit) then {
 
+LOG_DEBUG("INIT loadout class tfar exists");
   //execute applyLoadout after alle radios are received from TFAR
-  [getPlayerUID  _unit, 
+  [netId _unit,
     "OnRadiosReceived", {
-      [getPlayerUID  _unit, "OnRadiosReceived", player] call TFAR_fnc_removeEventHandler;
+      [netId _unit, "OnRadiosReceived", _unit] call TFAR_fnc_removeEventHandler;
       FNC_SMI(applyLoadout);
-      }, 
-    player] call TFAR_fnc_addEventHandler;
-      
+      },
+    _unit] call TFAR_fnc_addEventHandler;
+
+  LOG_DEBUG("loading stuff with TFAR enabled....");
+
 } else {
   //execute scheduleLoadout by Fusselwurm if no tfar is loaded
-  FNC_SMI(scheduleLoadout);
+  LOG_DEBUG("loading stuff.... no tfar");
+  [] call FNC_SMI(scheduleLoadout);
+
 };
