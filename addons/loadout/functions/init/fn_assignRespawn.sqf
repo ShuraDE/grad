@@ -2,4 +2,4 @@
 
 if ( isDedicated ) exitWith {};
 
-player addEventHandler ["Respawn", FNC_SMI(ApplyLoadout)];
+//player addEventHandler ["Respawn", FNC_SMI(ApplyLoadout)];

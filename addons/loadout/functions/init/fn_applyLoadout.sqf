@@ -1,21 +1,19 @@
 #include "\y\grad\addons\loadout\script_component.hpp"
-private ["_configPath"];
+private ["_configPath", "_units"];
 
 LOG_DEBUG("loadout applyLoadout");
 
 // Make sure that only local player is considered as target on respawn.
 // This is because AI don't respawn, and we especially don't want to have local AI go through an entire loadout loop again, everytime the player respawns that the AI belongs to.
 
+LOG_DEBUG(str(count allUnits));
+
+_units = [];
 {
 	if ( local _x ) then {
 		_units pushBack _x;
 	};
 } forEach allUnits;
-
-
-LOG_DEBUG(format ["all units %1",str(count allUnits)]);
-LOG_DEBUG(format ["affected units %1",str(count _units)]);
-
 
 
 _configPath = missionConfigFile >> "CfgLoadouts";
