@@ -1,7 +1,7 @@
 class CfgRemoteExec
 {
-        class Functions
-        {
-              
-        };
+  class Functions
+  {
+    mode = 2;
+  };
 };

@@ -7,10 +7,9 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"grad_main"};
         version = VERSION;
-        author[] = {"Fry"};
+        author[] = {"Cephei", "BaerMitUmlaut", "Moritz Schmidt", "Steven Koeberich", "ShuraDE"};
         authorUrl = "https://gruppe-adler.de";
     };
 };
 
 #include "cfgFunctions.hpp"
-#include "cfgRemoteExec.hpp"
