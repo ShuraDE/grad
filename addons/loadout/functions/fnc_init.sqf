@@ -2,9 +2,6 @@
 params ["_unit"];
 
 LOG_DEBUG("INIT loadout ADDON");
-LOG_DEBUG(QUOTE(FNC_SMI(scheduleLoadout)));
-LOG_DEBUG(QUOTE(FNC_SMI(doLoadout)));
-LOG_DEBUG(QUOTE(FNC_SMI(applyLoadout)));
 
 
 //check TFAR is loaded and player controlled unit
